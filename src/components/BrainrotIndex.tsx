@@ -57,6 +57,7 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
   const [activeTab, setActiveTab] = useState<Variant>('Normal');
   const [appMode, setAppMode] = useState<AppMode>('INDEX');
   const [searchTerm, setSearchTerm] = useState('');
+  const [sortOrder, setSortOrder] = useState<'wert' | 'name'>('wert');
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
 
   // States für Index und Trading (mit LocalStorage) — keys are numeric IDs as strings
@@ -77,8 +78,8 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
       besitz:  `💰 **KANN ICH FÜR ${tab}-INDEX GEBEN** 💰`,
     };
 
-    let itemListText = "";
-    let hasItems = false;
+    const RARITY_ORDER = ['Common', 'Rare', 'Epic', 'Legendary', 'Mythical', 'Brainrot God', 'Secret'];
+    const grouped: Record<string, string[]> = {};
 
     filteredItems.forEach((item) => {
       const key = String(item.id);
@@ -91,10 +92,16 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
         isTradingItem;
 
       if (include) {
-        hasItems = true;
-        itemListText += `• **${item.name}** (${item.rarity || "Common"})\n`;
+        const rarity = item.rarity || 'Common';
+        (grouped[rarity] ??= []).push(item.name);
       }
     });
+
+    const hasItems = Object.keys(grouped).length > 0;
+    const itemListText = RARITY_ORDER
+      .filter(r => grouped[r]?.length)
+      .map(r => `**${r}**\n${grouped[r].map(n => `• ${n}`).join('\n')}`)
+      .join('\n\n');
 
     const finalDocument = `${titles[type]}\n\n${hasItems ? itemListText : "Keine Items gefunden."}`;
     navigator.clipboard.writeText(finalDocument);
@@ -127,11 +134,13 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
   };
 
   const filteredItems = useMemo(() => {
-    return brainrotList.filter(item => {
+    const filtered = brainrotList.filter(item => {
       const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesSearch && isItemInTab(item, activeTab);
     });
-  }, [searchTerm, activeTab, brainrotList]);
+    if (sortOrder === 'name') filtered.sort((a, b) => a.name.localeCompare(b.name));
+    return filtered;
+  }, [searchTerm, activeTab, brainrotList, sortOrder]);
 
   // All items for current tab (unfiltered by search) for count display
   const tabItems = useMemo(() => {
@@ -149,7 +158,7 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
       {/* SIDEBAR (unverändert) */}
       <aside className="w-52 bg-[#0c0d0f] border-r border-white/5 flex flex-col p-4 gap-2">
         <div className="mb-6 px-2 border-b border-white/5 pb-4">
-          <h1 className="text-xl font-black italic uppercase tracking-tighter">Brainrot OS</h1>
+          <h1 className="text-xl font-black italic uppercase tracking-tighter">Brainrot-Tracker</h1>
         </div>
         {VARIANTS.map(v => (
           <button key={v} onClick={() => setActiveTab(v)} className={`py-2 px-4 rounded font-black uppercase text-[10px] tracking-widest transition-all border-b-4 ${activeTab === v ? `${VARIANT_STYLES[v].active} scale-105` : 'bg-black/40 border-black/60 opacity-50 hover:opacity-100'}`}>
@@ -195,8 +204,15 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
               </button>
             ))}
             
-            <input 
-              type="text" placeholder="FILTER..." 
+            <button
+              onClick={() => setSortOrder(s => s === 'wert' ? 'name' : 'wert')}
+              className="px-3 py-1 rounded text-[9px] font-black uppercase border border-white/10 bg-black/40 text-zinc-300 hover:bg-zinc-700 transition-all"
+            >
+              {sortOrder === 'wert' ? 'Wert ↑' : 'Name A-Z'}
+            </button>
+
+            <input
+              type="text" placeholder="FILTER..."
               className="bg-black/40 border border-white/10 rounded px-4 py-1 text-xs outline-none focus:border-white/30"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -204,7 +220,7 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
         </header>
 
         {/* GRID (unverändert kompakt) */}
-        <div className="flex-1 overflow-y-auto p-6 grid grid-cols-[repeat(auto-fill,minmax(150px,200px))] gap-3 justify-center custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-6 grid grid-cols-[repeat(auto-fill,minmax(150px,200px))] gap-3 justify-center content-start custom-scrollbar">
           {filteredItems.map(item => {
             const key = String(item.id);
             const isActive = appMode === 'INDEX' ? userStats[key]?.includes(activeTab) : tradingStats[key]?.includes(activeTab);

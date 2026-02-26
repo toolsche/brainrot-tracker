@@ -60,6 +60,10 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
   const [sortOrder, setSortOrder] = useState<'wert' | 'name'>('wert');
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
   const [shareStatus, setShareStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
+  const [showWhoHas, setShowWhoHas] = useState(false);
+  const [whoHasData, setWhoHasData] = useState<Record<string, any> | null>(null);
+  const [whoHasLoading, setWhoHasLoading] = useState(false);
+  const [whoHasError, setWhoHasError] = useState<string | null>(null);
   const [showSync, setShowSync] = useState(false);
   const [syncMode, setSyncMode] = useState<'export' | 'import'>('export');
   const [importText, setImportText] = useState('');
@@ -130,6 +134,20 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
     setTimeout(() => setShareStatus('idle'), 3000);
   };
 
+  const handleFetchWhoHas = async () => {
+    setShowWhoHas(true);
+    setWhoHasLoading(true);
+    setWhoHasError(null);
+    try {
+      const res = await fetch('/.proxy/api/userdata');
+      if (!res.ok) throw new Error();
+      setWhoHasData(await res.json());
+    } catch {
+      setWhoHasError('Fehler beim Laden der Daten.');
+    }
+    setWhoHasLoading(false);
+  };
+
   const syncExportText = JSON.stringify({ index: userStats, trading: tradingStats }, null, 2);
 
   const handleImport = () => {
@@ -183,6 +201,27 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
   const tabItems = useMemo(() => {
     return brainrotList.filter(item => isItemInTab(item, activeTab));
   }, [activeTab, brainrotList]);
+
+  const whoHasResults = useMemo(() => {
+    if (!whoHasData) return [];
+    const missingIds = new Set(
+      tabItems
+        .filter(item => !userStats[String(item.id)]?.includes(activeTab))
+        .map(item => String(item.id))
+    );
+    return Object.entries(whoHasData)
+      .filter(([uid]) => uid !== discordUserId)
+      .map(([uid, userData]: [string, any]) => {
+        const theirIndex: Record<string, string[]> = userData.index ?? {};
+        const items = tabItems.filter(item => {
+          const id = String(item.id);
+          return missingIds.has(id) && theirIndex[id]?.includes(activeTab);
+        });
+        return { uid, username: userData.username ?? 'Unbekannt', avatar: userData.avatar ?? null, updatedAt: userData.updatedAt ?? null, items };
+      })
+      .filter(u => u.items.length > 0)
+      .sort((a, b) => b.items.length - a.items.length);
+  }, [whoHasData, tabItems, userStats, activeTab, discordUserId]);
 
   const collectedCount = useMemo(() => {
     const stats = appMode === 'INDEX' ? userStats : tradingStats;
@@ -241,6 +280,13 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
               </button>
             ))}
             
+            <button
+              onClick={handleFetchWhoHas}
+              className={`px-3 py-1 rounded text-[9px] font-black uppercase border transition-all ${showWhoHas ? 'bg-indigo-700 border-indigo-500 text-white' : 'border-white/10 bg-black/40 text-zinc-300 hover:bg-zinc-700'}`}
+            >
+              🔍 Wer hat's?
+            </button>
+
             {discordUserId && (
               <button
                 onClick={handleShare}
@@ -277,24 +323,68 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
           </div>
         </header>
 
-        {/* GRID (unverändert kompakt) */}
-        <div className="flex-1 overflow-y-auto p-6 grid grid-cols-[repeat(auto-fill,minmax(150px,200px))] gap-3 justify-center content-start custom-scrollbar">
-          {filteredItems.map(item => {
-            const key = String(item.id);
-            const isActive = appMode === 'INDEX' ? userStats[key]?.includes(activeTab) : tradingStats[key]?.includes(activeTab);
-            const displayTier = item.rarity || "Common";
+        {showWhoHas ? (
+          /* WER HAT WAS ICH BRAUCHE */
+          <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
+            <div className="flex items-center gap-4 mb-6">
+              <button onClick={() => setShowWhoHas(false)} className="text-white/40 hover:text-white text-sm font-black">← Zurück</button>
+              <h3 className="font-black uppercase tracking-widest text-sm">Wer hat meine fehlenden <span className={VARIANT_STYLES[activeTab].text}>{activeTab}</span>-Items?</h3>
+            </div>
 
-            return (
-              <div key={item.id} onClick={() => toggleItem(item.id)} className={`relative bg-[#1e2321] border-2 rounded-lg p-2 flex flex-col cursor-pointer transition-all ${isActive ? 'border-white/10 opacity-100 shadow-lg' : 'border-white/5 opacity-40 grayscale'}`} style={{ maxWidth: '200px' }}>
-                <h3 className="font-black text-[11px] text-white mb-1 text-center leading-tight min-h-[2em] line-clamp-2">{item.name}</h3>
-                <div className="aspect-square bg-black/30 rounded flex items-center justify-center p-2 relative overflow-hidden mb-1">
-                  <img src={item.image.replace('https://www.steal-a-brainrot.de', '/img-proxy')} alt={item.name} className={`max-h-full object-contain ${!isActive ? 'brightness-0' : ''}`} />
+            {whoHasLoading && <p className="text-white/40 text-sm">Lade Daten...</p>}
+            {whoHasError  && <p className="text-red-400 text-sm">{whoHasError}</p>}
+
+            {!whoHasLoading && !whoHasError && whoHasResults.length === 0 && (
+              <p className="text-white/40 text-sm">Niemand hat Items die dir noch fehlen — oder noch keine Daten geteilt.</p>
+            )}
+
+            <div className="flex flex-col gap-4">
+              {whoHasResults.map(user => (
+                <div key={user.uid} className="bg-[#1e2321] border border-white/10 rounded-xl p-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    {user.avatar
+                      ? <img src={`https://cdn.discordapp.com/avatars/${user.uid}/${user.avatar}.png?size=32`} alt={user.username} className="w-8 h-8 rounded-full" />
+                      : <div className="w-8 h-8 rounded-full bg-zinc-700 flex items-center justify-center text-xs font-black">{user.username[0]?.toUpperCase()}</div>
+                    }
+                    <span className="font-black text-sm">{user.username}</span>
+                    <span className="ml-auto text-xs font-black bg-indigo-900/60 border border-indigo-500/40 text-indigo-300 px-2 py-0.5 rounded-full">
+                      {user.items.length} Item{user.items.length !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    {user.items.map(item => (
+                      <span key={item.id} className={`text-[10px] font-black px-2 py-0.5 rounded bg-black/40 border border-white/10 ${TIER_STYLES[item.rarity] || TIER_STYLES['Common']}`}>
+                        {item.name}
+                      </span>
+                    ))}
+                  </div>
+                  {user.updatedAt && (
+                    <p className="text-[10px] text-white/20 mt-2">Zuletzt geteilt: {new Date(user.updatedAt).toLocaleString('de-DE')}</p>
+                  )}
                 </div>
-                <div className={`text-center font-black text-[10px] uppercase tracking-wider ${TIER_STYLES[displayTier] || TIER_STYLES["Common"]}`}>{displayTier}</div>
-              </div>
-            );
-          })}
-        </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          /* GRID */
+          <div className="flex-1 overflow-y-auto p-6 grid grid-cols-[repeat(auto-fill,minmax(150px,200px))] gap-3 justify-center content-start custom-scrollbar">
+            {filteredItems.map(item => {
+              const key = String(item.id);
+              const isActive = appMode === 'INDEX' ? userStats[key]?.includes(activeTab) : tradingStats[key]?.includes(activeTab);
+              const displayTier = item.rarity || "Common";
+
+              return (
+                <div key={item.id} onClick={() => toggleItem(item.id)} className={`relative bg-[#1e2321] border-2 rounded-lg p-2 flex flex-col cursor-pointer transition-all ${isActive ? 'border-white/10 opacity-100 shadow-lg' : 'border-white/5 opacity-40 grayscale'}`} style={{ maxWidth: '200px' }}>
+                  <h3 className="font-black text-[11px] text-white mb-1 text-center leading-tight min-h-[2em] line-clamp-2">{item.name}</h3>
+                  <div className="aspect-square bg-black/30 rounded flex items-center justify-center p-2 relative overflow-hidden mb-1">
+                    <img src={item.image.replace('https://www.steal-a-brainrot.de', '/img-proxy')} alt={item.name} className={`max-h-full object-contain ${!isActive ? 'brightness-0' : ''}`} />
+                  </div>
+                  <div className={`text-center font-black text-[10px] uppercase tracking-wider ${TIER_STYLES[displayTier] || TIER_STYLES["Common"]}`}>{displayTier}</div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </main>
 
       {/* SYNC MODAL */}

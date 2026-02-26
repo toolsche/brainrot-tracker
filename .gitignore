@@ -14,9 +14,14 @@ dist-ssr
 
 .env
 
-# Local assets
+# Local assets and dev artifacts
 brainrot_images/
+images-dl/
+final_matches.json
 *.zip
+
+# Claude Code local config
+.claude/
 
 # Editor directories and files
 .vscode/*

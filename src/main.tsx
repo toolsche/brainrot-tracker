@@ -6,10 +6,10 @@ import "./index.css";
 
 const CLIENT_ID = import.meta.env.VITE_DISCORD_CLIENT_ID as string;
 
-function render(discordUserId?: string) {
+function render(discordUserId?: string, username?: string, avatar?: string) {
   ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-      <App discordUserId={discordUserId} />
+      <App discordUserId={discordUserId} username={username} avatar={avatar} />
     </React.StrictMode>
   );
 }
@@ -43,7 +43,7 @@ if (params.has('frame_id')) {
     // Authenticate with Discord and get the current user's info
     const auth = await discordSdk.commands.authenticate({ access_token });
 
-    render(auth.user.id);
+    render(auth.user.id, auth.user.username, auth.user.avatar ?? undefined);
   })().catch((err) => {
     console.error('Discord auth failed:', err);
     render(); // fall back to anonymous mode

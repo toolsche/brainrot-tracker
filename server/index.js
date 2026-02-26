@@ -1,5 +1,5 @@
 import express from 'express';
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 
 // Load .env from project root
@@ -17,6 +17,7 @@ try {
 const CLIENT_ID     = process.env.VITE_DISCORD_CLIENT_ID;
 const CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
 const PORT          = process.env.PORT ?? 3001;
+const USERDATA_FILE = resolve(import.meta.dirname, 'userdata.json');
 
 if (!CLIENT_ID || !CLIENT_SECRET) {
   console.error('Missing VITE_DISCORD_CLIENT_ID or DISCORD_CLIENT_SECRET in .env');
@@ -49,6 +50,29 @@ app.post('/api/token', async (req, res) => {
   }
 
   res.json({ access_token: data.access_token });
+});
+
+function readUserdata() {
+  if (!existsSync(USERDATA_FILE)) return {};
+  try { return JSON.parse(readFileSync(USERDATA_FILE, 'utf-8')); } catch { return {}; }
+}
+
+function writeUserdata(data) {
+  writeFileSync(USERDATA_FILE, JSON.stringify(data, null, 2));
+}
+
+app.post('/api/userdata', (req, res) => {
+  const { discordUserId, username, avatar, index, trading } = req.body ?? {};
+  if (!discordUserId || !index || !trading) return res.status(400).json({ error: 'missing fields' });
+
+  const data = readUserdata();
+  data[discordUserId] = { username: username ?? 'Unbekannt', avatar: avatar ?? null, index, trading, updatedAt: new Date().toISOString() };
+  writeUserdata(data);
+  res.json({ ok: true });
+});
+
+app.get('/api/userdata', (_req, res) => {
+  res.json(readUserdata());
 });
 
 app.listen(PORT, () => console.log(`Token server running on :${PORT}`));

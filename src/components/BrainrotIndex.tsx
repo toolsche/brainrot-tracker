@@ -50,7 +50,7 @@ const TIER_STYLES: Record<string, string> = {
   "Secret": "text-white italic brightness-150"
 };
 
-export default function BrainrotDashboard({ discordUserId }: { discordUserId?: string }) {
+export default function BrainrotDashboard({ discordUserId, username, avatar }: { discordUserId?: string; username?: string; avatar?: string }) {
   const lsIndex   = discordUserId ? `brainrot_index_${discordUserId}`   : 'brainrot_index';
   const lsTrading = discordUserId ? `brainrot_trading_${discordUserId}` : 'brainrot_trading';
 
@@ -59,6 +59,11 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState<'wert' | 'name'>('wert');
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
+  const [shareStatus, setShareStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
+  const [showSync, setShowSync] = useState(false);
+  const [syncMode, setSyncMode] = useState<'export' | 'import'>('export');
+  const [importText, setImportText] = useState('');
+  const [importError, setImportError] = useState<string | null>(null);
 
   // States für Index und Trading (mit LocalStorage) — keys are numeric IDs as strings
   const [userStats, setUserStats] = useState<Record<string, string[]>>(() => migrateStorage(lsIndex));
@@ -107,6 +112,38 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
     navigator.clipboard.writeText(finalDocument);
     setCopyFeedback(type);
     setTimeout(() => setCopyFeedback(null), 2000);
+  };
+
+  const handleShare = async () => {
+    if (!discordUserId) return;
+    setShareStatus('loading');
+    try {
+      const res = await fetch('/.proxy/api/userdata', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ discordUserId, username, avatar, index: userStats, trading: tradingStats }),
+      });
+      setShareStatus(res.ok ? 'ok' : 'error');
+    } catch {
+      setShareStatus('error');
+    }
+    setTimeout(() => setShareStatus('idle'), 3000);
+  };
+
+  const syncExportText = JSON.stringify({ index: userStats, trading: tradingStats }, null, 2);
+
+  const handleImport = () => {
+    try {
+      const parsed = JSON.parse(importText);
+      if (typeof parsed.index !== 'object' || typeof parsed.trading !== 'object') throw new Error();
+      setUserStats(parsed.index);
+      setTradingStats(parsed.trading);
+      setShowSync(false);
+      setImportText('');
+      setImportError(null);
+    } catch {
+      setImportError('Ungültiges Format. Bitte den exportierten JSON-Text einfügen.');
+    }
   };
 
   const brainrotList = useMemo(() => {
@@ -204,6 +241,27 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
               </button>
             ))}
             
+            {discordUserId && (
+              <button
+                onClick={handleShare}
+                disabled={shareStatus === 'loading'}
+                className={`px-3 py-1 rounded text-[9px] font-black uppercase border border-white/10 transition-all ${
+                  shareStatus === 'ok'    ? 'bg-green-800 text-white' :
+                  shareStatus === 'error' ? 'bg-red-800 text-white' :
+                  'bg-black/40 text-zinc-300 hover:bg-zinc-700'
+                }`}
+              >
+                {shareStatus === 'loading' ? '...' : shareStatus === 'ok' ? '✓ Geteilt' : shareStatus === 'error' ? '✕ Fehler' : '↑ Teilen'}
+              </button>
+            )}
+
+            <button
+              onClick={() => { setSyncMode('export'); setShowSync(true); }}
+              className="px-3 py-1 rounded text-[9px] font-black uppercase border border-white/10 bg-black/40 text-zinc-300 hover:bg-zinc-700 transition-all"
+            >
+              ⇅ Sync
+            </button>
+
             <button
               onClick={() => setSortOrder(s => s === 'wert' ? 'name' : 'wert')}
               className="px-3 py-1 rounded text-[9px] font-black uppercase border border-white/10 bg-black/40 text-zinc-300 hover:bg-zinc-700 transition-all"
@@ -238,6 +296,53 @@ export default function BrainrotDashboard({ discordUserId }: { discordUserId?: s
           })}
         </div>
       </main>
+
+      {/* SYNC MODAL */}
+      {showSync && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={() => setShowSync(false)}>
+          <div className="bg-[#1e2321] border border-white/10 rounded-xl p-6 w-[480px] flex flex-col gap-4" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <h3 className="font-black uppercase tracking-widest text-sm">Daten Sync</h3>
+              <button onClick={() => setShowSync(false)} className="text-white/40 hover:text-white text-lg leading-none">✕</button>
+            </div>
+
+            <div className="flex bg-black/40 rounded-lg p-1 border border-white/10 self-start">
+              <button onClick={() => setSyncMode('export')} className={`px-4 py-1 text-[9px] font-black uppercase rounded ${syncMode === 'export' ? 'bg-zinc-600 text-white' : 'text-zinc-500'}`}>Export</button>
+              <button onClick={() => { setSyncMode('import'); setImportError(null); }} className={`px-4 py-1 text-[9px] font-black uppercase rounded ${syncMode === 'import' ? 'bg-zinc-600 text-white' : 'text-zinc-500'}`}>Import</button>
+            </div>
+
+            {syncMode === 'export' ? (
+              <>
+                <p className="text-xs text-white/50">Kopiere diesen Text und füge ihn auf dem anderen Gerät im Import-Tab ein.</p>
+                <textarea readOnly value={syncExportText} className="bg-black/40 border border-white/10 rounded p-3 text-[10px] font-mono text-white/70 h-48 resize-none outline-none" onClick={e => (e.target as HTMLTextAreaElement).select()} />
+                <button
+                  onClick={() => navigator.clipboard.writeText(syncExportText)}
+                  className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 rounded text-[9px] font-black uppercase self-start"
+                >
+                  📋 Kopieren
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="text-xs text-white/50">Füge den exportierten Text hier ein, um deine Daten zu laden.</p>
+                <textarea
+                  value={importText}
+                  onChange={e => { setImportText(e.target.value); setImportError(null); }}
+                  placeholder='{"index": {...}, "trading": {...}}'
+                  className="bg-black/40 border border-white/10 rounded p-3 text-[10px] font-mono text-white/70 h-48 resize-none outline-none focus:border-white/30"
+                />
+                {importError && <p className="text-xs text-red-400">{importError}</p>}
+                <button
+                  onClick={handleImport}
+                  className="px-4 py-2 bg-green-800 hover:bg-green-700 rounded text-[9px] font-black uppercase self-start"
+                >
+                  ✓ Laden
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

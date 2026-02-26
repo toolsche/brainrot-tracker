@@ -17,6 +17,7 @@ dist-ssr
 # Local assets and dev artifacts
 brainrot_images/
 images-dl/
+images_new/
 final_matches.json
 *.zip
 

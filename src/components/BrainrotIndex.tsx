@@ -50,20 +50,23 @@ const TIER_STYLES: Record<string, string> = {
   "Secret": "text-white italic brightness-150"
 };
 
-export default function BrainrotDashboard() {
+export default function BrainrotDashboard({ discordUserId }: { discordUserId?: string }) {
+  const lsIndex   = discordUserId ? `brainrot_index_${discordUserId}`   : 'brainrot_index';
+  const lsTrading = discordUserId ? `brainrot_trading_${discordUserId}` : 'brainrot_trading';
+
   const [activeTab, setActiveTab] = useState<Variant>('Normal');
   const [appMode, setAppMode] = useState<AppMode>('INDEX');
   const [searchTerm, setSearchTerm] = useState('');
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
 
   // States für Index und Trading (mit LocalStorage) — keys are numeric IDs as strings
-  const [userStats, setUserStats] = useState<Record<string, string[]>>(() => migrateStorage('brainrot_index'));
-  const [tradingStats, setTradingStats] = useState<Record<string, string[]>>(() => migrateStorage('brainrot_trading'));
+  const [userStats, setUserStats] = useState<Record<string, string[]>>(() => migrateStorage(lsIndex));
+  const [tradingStats, setTradingStats] = useState<Record<string, string[]>>(() => migrateStorage(lsTrading));
 
   useEffect(() => {
-    localStorage.setItem('brainrot_index', JSON.stringify(userStats));
-    localStorage.setItem('brainrot_trading', JSON.stringify(tradingStats));
-  }, [userStats, tradingStats]);
+    localStorage.setItem(lsIndex, JSON.stringify(userStats));
+    localStorage.setItem(lsTrading, JSON.stringify(tradingStats));
+  }, [userStats, tradingStats, lsIndex, lsTrading]);
 
   // --- EXPORT FUNKTION ---
   const handleExport = (type: 'fehlend' | 'index' | 'besitz') => {

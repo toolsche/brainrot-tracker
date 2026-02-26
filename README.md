@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# Brainrot Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Collection & trading tracker for the roblox game **Steal a Brainrot**, built as a Discord Activity (embedded app) and standalone web app.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 + TypeScript + Vite
+- Tailwind CSS v4
+- `@discord/embedded-app-sdk` for Discord Activity integration
+- Express backend (`server/index.js`) for Discord OAuth token exchange
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Track collected items per variant (Normal, Gold, Diamond, Rainbow, Radioactive, Cursed, Candy, Lava, Galaxy, YinYang, Divine)
+- Separate **Index** (what you have) and **Trading** (what you can give) modes
+- Sort by value or name A–Z
+- Filter by name
+- Export to Discord-formatted text, grouped by rarity
+- Works both inside Discord (Activity) and as a standalone website
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+cp .env.example .env  # fill in VITE_DISCORD_CLIENT_ID and DISCORD_CLIENT_SECRET
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Two processes need to run simultaneously:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev     # Vite dev server at http://localhost:5173
+npm run server  # Express token server at http://localhost:3001
 ```
+
+## Build
+
+```bash
+npm run build   # type-check + production build → dist/
+npm run preview # serve dist/ locally
+```
+
+## Data
+
+All item data lives in `src/data/brainrot_db.json`. Each item has:
+
+```ts
+{
+  id: number,
+  rarity: "Common" | "Rare" | "Epic" | "Legendary" | "Mythical" | "Brainrot God" | "Secret",
+  kosten: number,
+  wert: number,
+  image: string,
+  fixed_sets?: string[],  // limits item to specific variants (Candy/Lava/Galaxy)
+  type?: string[]
+}
+```
+
+User data is stored in `localStorage` — keyed by Discord user ID in Activity mode, anonymous in web mode.
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_DISCORD_CLIENT_ID` | Discord application client ID |
+| `DISCORD_CLIENT_SECRET` | Discord application client secret (server-side only) |

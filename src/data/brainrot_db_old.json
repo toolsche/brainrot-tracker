@@ -1,0 +1,2944 @@
+{
+    "Noobini Pizzanini": {
+        "rarity": "Common",
+        "kosten": 25,
+        "wert": 1,
+        "image": "https://www.steal-a-brainrot.de/images/noobini-pizzanini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Lirili Larila": {
+        "rarity": "Common",
+        "kosten": 250,
+        "wert": 3,
+        "image": "https://www.steal-a-brainrot.de/images/lirili-larila.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Tim Cheese": {
+        "rarity": "Common",
+        "kosten": 500,
+        "wert": 5,
+        "image": "https://www.steal-a-brainrot.de/images/tim-cheese.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "FluriFlura": {
+        "rarity": "Common",
+        "kosten": 750,
+        "wert": 7,
+        "image": "https://www.steal-a-brainrot.de/images/fluriflura.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Talpa Di Fero": {
+        "rarity": "Common",
+        "kosten": 1000,
+        "wert": 9,
+        "image": "https://www.steal-a-brainrot.de/images/talpa-di-fero.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Svinina Bombardino": {
+        "rarity": "Common",
+        "kosten": 1200,
+        "wert": 10,
+        "image": "https://www.steal-a-brainrot.de/images/svinina-bombardino.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Noobini Santanini": {
+        "rarity": "Common",
+        "kosten": 1300,
+        "wert": 11,
+        "image": "https://www.steal-a-brainrot.de/images/noobini-santanini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Raccooni Jandelini": {
+        "rarity": "Common",
+        "kosten": 1300,
+        "wert": 12,
+        "image": "https://www.steal-a-brainrot.de/images/raccooni-jandelini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Tartaragno": {
+        "rarity": "Common",
+        "kosten": 1500,
+        "wert": 13,
+        "image": "https://www.steal-a-brainrot.de/images/tartaragno.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Pipi Kiwi": {
+        "rarity": "Common",
+        "kosten": 1500,
+        "wert": 13,
+        "image": "https://www.steal-a-brainrot.de/images/pipi-kiwi.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Pipi Corni": {
+        "rarity": "Common",
+        "kosten": 1700,
+        "wert": 14,
+        "image": "https://www.steal-a-brainrot.de/images/pipi-corni.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Trippi Troppi": {
+        "rarity": "Rare",
+        "kosten": 2000,
+        "wert": 15,
+        "image": "https://www.steal-a-brainrot.de/images/trippi-troppi.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Gangster Footera": {
+        "rarity": "Rare",
+        "kosten": 4000,
+        "wert": 30,
+        "image": "https://www.steal-a-brainrot.de/images/gangster-footera.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Bandito Bobritto": {
+        "rarity": "Rare",
+        "kosten": 4500,
+        "wert": 35,
+        "image": "https://www.steal-a-brainrot.de/images/bandito-bobritto.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Boneca Ambalabu": {
+        "rarity": "Rare",
+        "kosten": 5000,
+        "wert": 40,
+        "image": "https://www.steal-a-brainrot.de/images/boneca-ambalabu.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Cacto Hipopotamo": {
+        "rarity": "Rare",
+        "kosten": 6500,
+        "wert": 50,
+        "image": "https://www.steal-a-brainrot.de/images/cacto-hipopotamo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Ta Ta Ta Ta Sahur": {
+        "rarity": "Rare",
+        "kosten": 7500,
+        "wert": 55,
+        "image": "https://www.steal-a-brainrot.de/images/ta-ta-ta-ta-sahur.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Cupcake Koala": {
+        "rarity": "Rare",
+        "kosten": 8000,
+        "wert": 60,
+        "image": "https://www.steal-a-brainrot.de/images/cupcake-koala.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Tric Trac Baraboom": {
+        "rarity": "Rare",
+        "kosten": 9000,
+        "wert": 65,
+        "image": "https://www.steal-a-brainrot.de/images/tric-trac-baraboom.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Frogo Elfo": {
+        "rarity": "Rare",
+        "kosten": 9200,
+        "wert": 67,
+        "image": "https://www.steal-a-brainrot.de/images/frogo-elfo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Pipi Avocado": {
+        "rarity": "Rare",
+        "kosten": 9500,
+        "wert": 70,
+        "image": "https://www.steal-a-brainrot.de/images/pipi-avocado.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Pinealotto Fruttarino": {
+        "rarity": "Rare",
+        "kosten": 9700,
+        "wert": 75,
+        "image": "https://www.steal-a-brainrot.de/images/pinealotto-fruttarino.webp",
+        "fixed_sets": []
+    },
+    "Cappuccino Assassino": {
+        "rarity": "Epic",
+        "kosten": 10000,
+        "wert": 75,
+        "image": "https://www.steal-a-brainrot.de/images/cappuccino-assassino.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Bandito Axolito": {
+        "rarity": "Epic",
+        "kosten": 12500,
+        "wert": 90,
+        "image": "https://www.steal-a-brainrot.de/images/bandito-axolito.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Brr Brr Patapim": {
+        "rarity": "Epic",
+        "kosten": 15000,
+        "wert": 100,
+        "image": "https://www.steal-a-brainrot.de/images/brr-brr-patapim.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Avocadini Antilopini": {
+        "rarity": "Epic",
+        "kosten": 17500,
+        "wert": 115,
+        "image": "https://www.steal-a-brainrot.de/images/avocadini-antilopini.webp",
+        "fixed_sets": []
+    },
+    "Trulimero Trulicina": {
+        "rarity": "Epic",
+        "kosten": 20000,
+        "wert": 125,
+        "image": "https://www.steal-a-brainrot.de/images/trulimero-trulicina.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Bambini Crostini": {
+        "rarity": "Epic",
+        "kosten": 22500,
+        "wert": 130,
+        "image": "https://www.steal-a-brainrot.de/images/bambini-crostini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Malame Amarele": {
+        "rarity": "Epic",
+        "kosten": 23500,
+        "wert": 140,
+        "image": "https://www.steal-a-brainrot.de/images/malame-amarele.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Bananita Dolphinita": {
+        "rarity": "Epic",
+        "kosten": 25000,
+        "wert": 150,
+        "image": "https://www.steal-a-brainrot.de/images/bananita-dolphinita.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Perochello Lemonchello": {
+        "rarity": "Epic",
+        "kosten": 27500,
+        "wert": 160,
+        "image": "https://www.steal-a-brainrot.de/images/perochello-lemonchello.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Brri Brri Bicus Dicus Bombicus": {
+        "rarity": "Epic",
+        "kosten": 30000,
+        "wert": 175,
+        "image": "https://www.steal-a-brainrot.de/images/brri-brri-bicus-dicus-bombicus.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Burbaloni Loliloli": {
+        "rarity": "Legendary",
+        "kosten": 35000,
+        "wert": 200,
+        "image": "https://www.steal-a-brainrot.de/images/burbaloni-loliloli.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Avocadini Guffo": {
+        "rarity": "Epic",
+        "kosten": 35000,
+        "wert": 225,
+        "image": "https://www.steal-a-brainrot.de/images/avocadini-guffo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Ti Ti Ti Sahur": {
+        "rarity": "Epic",
+        "kosten": 37500,
+        "wert": 225,
+        "image": "https://www.steal-a-brainrot.de/images/ti-ti-ti-sahur.webp",
+        "fixed_sets": []
+    },
+    "Mangolini Parrocini": {
+        "rarity": "Epic",
+        "kosten": 38500,
+        "wert": 235,
+        "image": "https://www.steal-a-brainrot.de/images/mangolini-parrocini.webp",
+        "fixed_sets": []
+    },
+    "Frogato Pirato": {
+        "rarity": "Epic",
+        "kosten": 39000,
+        "wert": 240,
+        "image": "https://www.steal-a-brainrot.de/images/frogato-pirato.webp",
+        "fixed_sets": []
+    },
+    "Salamino Penguino": {
+        "rarity": "Epic",
+        "kosten": 40000,
+        "wert": 250,
+        "image": "https://www.steal-a-brainrot.de/images/salamino-penguino.webp",
+        "fixed_sets": []
+    },
+    "Doi Doi Do": {
+        "rarity": "Epic",
+        "kosten": 41000,
+        "wert": 260,
+        "image": "https://www.steal-a-brainrot.de/images/doi-doi-do.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Penguin Tree": {
+        "rarity": "Epic",
+        "kosten": 42500,
+        "wert": 275,
+        "image": "https://www.steal-a-brainrot.de/images/penguin-tree.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Wombo Rollo": {
+        "rarity": "Epic",
+        "kosten": 42500,
+        "wert": 275,
+        "image": "https://www.steal-a-brainrot.de/images/wombo-rollo.webp",
+        "fixed_sets": []
+    },
+    "Penguino Cocosino": {
+        "rarity": "Epic",
+        "kosten": 45000,
+        "wert": 300,
+        "image": "https://www.steal-a-brainrot.de/images/penguino-cocosino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Chimpanzini Bananini": {
+        "rarity": "Legendary",
+        "kosten": 50000,
+        "wert": 300,
+        "image": "https://www.steal-a-brainrot.de/images/chimpanzini-bananini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Mummio Rappitto": {
+        "rarity": "Epic",
+        "kosten": 57500,
+        "wert": 325,
+        "image": "https://www.steal-a-brainrot.de/images/mummio-rappitto.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Tirilikalika Tirilikalako": {
+        "rarity": "Legendary",
+        "kosten": 75000,
+        "wert": 450,
+        "image": "https://www.steal-a-brainrot.de/images/tirilikalika-tirilikalako.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Ballerina Cappuccina": {
+        "rarity": "Legendary",
+        "kosten": 100000,
+        "wert": 500,
+        "image": "https://www.steal-a-brainrot.de/images/ballerina-cappuccina.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Chef Crabracadabra": {
+        "rarity": "Legendary",
+        "kosten": 150000,
+        "wert": 600,
+        "image": "https://www.steal-a-brainrot.de/images/chef-crabracadabra.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Lionel Cactuseli": {
+        "rarity": "Legendary",
+        "kosten": 175000,
+        "wert": 650,
+        "image": "https://www.steal-a-brainrot.de/images/lionel-cactuseli.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Glorbo Fruttodrillo": {
+        "rarity": "Legendary",
+        "kosten": 200000,
+        "wert": 750,
+        "image": "https://www.steal-a-brainrot.de/images/glorbo-fruttodrillo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Quivioli Ameleonni": {
+        "rarity": "Legendary",
+        "kosten": 225000,
+        "wert": 900,
+        "image": "https://www.steal-a-brainrot.de/images/quivioli-ameleonni.webp",
+        "fixed_sets": []
+    },
+    "Clickerino Crabo": {
+        "rarity": "Legendary",
+        "kosten": 250000,
+        "wert": 1000,
+        "image": "https://www.steal-a-brainrot.de/images/clickerino-crabo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Blueberrinni Octopusini": {
+        "rarity": "Legendary",
+        "kosten": 250000,
+        "wert": 1000,
+        "image": "https://www.steal-a-brainrot.de/images/blueberrinni-octopusini.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Caramello Filtrello": {
+        "rarity": "Legendary",
+        "kosten": 255000,
+        "wert": 1000,
+        "image": "https://www.steal-a-brainrot.de/images/caramello-filtrello.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Pipi Potato": {
+        "rarity": "Legendary",
+        "kosten": 256000,
+        "wert": 1100,
+        "image": "https://www.steal-a-brainrot.de/images/pipi-potato.webp",
+        "fixed_sets": []
+    },
+    "Strawberelli Flamingelli": {
+        "rarity": "Legendary",
+        "kosten": 275000,
+        "wert": 1100,
+        "image": "https://www.steal-a-brainrot.de/images/strawberelli-flamingelli.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Cocosini Mama": {
+        "rarity": "Legendary",
+        "kosten": 285000,
+        "wert": 1200,
+        "image": "https://www.steal-a-brainrot.de/images/cocosini-mama.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Pandaccini Bananini": {
+        "rarity": "Legendary",
+        "kosten": 300000,
+        "wert": 1200,
+        "image": "https://www.steal-a-brainrot.de/images/pandaccini-bananini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Quackula": {
+        "rarity": "Legendary",
+        "kosten": 310000,
+        "wert": 1200,
+        "image": "https://www.steal-a-brainrot.de/images/quackula.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Pi Pi Watermelon": {
+        "rarity": "Legendary",
+        "kosten": 315000,
+        "wert": 1300,
+        "image": "https://www.steal-a-brainrot.de/images/pi-pi-watermelon.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Signore Carapace": {
+        "rarity": "Legendary",
+        "kosten": 320000,
+        "wert": 1300,
+        "image": "https://www.steal-a-brainrot.de/images/signore-carapace.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Sigma Boy": {
+        "rarity": "Legendary",
+        "kosten": 325000,
+        "wert": 1300,
+        "image": "https://www.steal-a-brainrot.de/images/sigma-boy.webp",
+        "fixed_sets": []
+    },
+    "Chocco Bunny": {
+        "rarity": "Legendary",
+        "kosten": 327500,
+        "wert": 1400,
+        "image": "https://www.steal-a-brainrot.de/images/chocco-bunny.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Puffaball": {
+        "rarity": "Legendary",
+        "kosten": 330000,
+        "wert": 1500,
+        "image": "https://www.steal-a-brainrot.de/images/puffaball.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Sigma Girl": {
+        "rarity": "Legendary",
+        "kosten": 340000,
+        "wert": 1800,
+        "image": "https://www.steal-a-brainrot.de/images/sigma-girl.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Sealo Regalo": {
+        "rarity": "Legendary",
+        "kosten": 342500,
+        "wert": 1800,
+        "image": "https://www.steal-a-brainrot.de/images/sealo-regalo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Buho De Fuego": {
+        "rarity": "Legendary",
+        "kosten": 345000,
+        "wert": 1800,
+        "image": "https://www.steal-a-brainrot.de/images/buho-de-fuego.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Frigo Camelo": {
+        "rarity": "Mythical",
+        "kosten": 300000,
+        "wert": 1400,
+        "image": "https://www.steal-a-brainrot.de/images/frigo-camelo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Orangutini Ananassini": {
+        "rarity": "Mythical",
+        "kosten": 400000,
+        "wert": 1700,
+        "image": "https://www.steal-a-brainrot.de/images/orangutini-ananassini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Rhino Toasterino": {
+        "rarity": "Mythical",
+        "kosten": 450000,
+        "wert": 2100,
+        "image": "https://www.steal-a-brainrot.de/images/rhino-toasterino.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Bombardiro Crocodilo": {
+        "rarity": "Mythical",
+        "kosten": 500000,
+        "wert": 2500,
+        "image": "https://www.steal-a-brainrot.de/images/bombardiro-crocodilo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Brutto Gialutto": {
+        "rarity": "Mythical",
+        "kosten": 600000,
+        "wert": 3000,
+        "image": "https://www.steal-a-brainrot.de/images/brutto-gialutto.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Spioniro Golubiro": {
+        "rarity": "Mythical",
+        "kosten": 750000,
+        "wert": 3500,
+        "image": "https://www.steal-a-brainrot.de/images/spioniro-golubiro.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Mythic Lucky Block"
+        ]
+    },
+    "Bombombini Gusini": {
+        "rarity": "Mythical",
+        "kosten": 1000000,
+        "wert": 5000,
+        "image": "https://www.steal-a-brainrot.de/images/bombombini-gusini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Zibra Zubra Zibralini": {
+        "rarity": "Mythical",
+        "kosten": 1000000,
+        "wert": 6000,
+        "image": "https://www.steal-a-brainrot.de/images/zibra-zubra-zibralini.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Mythic Lucky Block"
+        ]
+    },
+    "Tigrilini Watermelini": {
+        "rarity": "Mythical",
+        "kosten": 1000000,
+        "wert": 6500,
+        "image": "https://www.steal-a-brainrot.de/images/tigrilini-watermelini.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Mythic Lucky Block"
+        ]
+    },
+    "Avocadorilla": {
+        "rarity": "Mythical",
+        "kosten": 2000000,
+        "wert": 7000,
+        "image": "https://www.steal-a-brainrot.de/images/avocadorilla.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Cavallo Virtuoso": {
+        "rarity": "Mythical",
+        "kosten": 2500000,
+        "wert": 7500,
+        "image": "https://www.steal-a-brainrot.de/images/cavallo-virtuoso.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Gorillo Subwoofero": {
+        "rarity": "Mythical",
+        "kosten": 2700000,
+        "wert": 7700,
+        "image": "https://www.steal-a-brainrot.de/images/gorillo-subwoofero.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Stoppo Luminino": {
+        "rarity": "Mythical",
+        "kosten": 3000000,
+        "wert": 8000,
+        "image": "https://www.steal-a-brainrot.de/images/stoppo-luminino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Gorillo Watermelondrillo": {
+        "rarity": "Mythical",
+        "kosten": 3000000,
+        "wert": 8000,
+        "image": "https://www.steal-a-brainrot.de/images/gorillo-watermelondrillo.webp",
+        "fixed_sets": []
+    },
+    "Tob Tobi Tobi": {
+        "rarity": "Mythical",
+        "kosten": 3500000,
+        "wert": 8500,
+        "image": "https://www.steal-a-brainrot.de/images/tob-tobi-tobi.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Lerulerulerule": {
+        "rarity": "Mythical",
+        "kosten": 3500000,
+        "wert": 8700,
+        "image": "https://www.steal-a-brainrot.de/images/lerulerulerule.webp",
+        "fixed_sets": []
+    },
+    "Ganganzelli Trulala": {
+        "rarity": "Mythical",
+        "kosten": 4000000,
+        "wert": 9000,
+        "image": "https://www.steal-a-brainrot.de/images/ganganzelli-trulala.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Te Te Te Sahur": {
+        "rarity": "Mythical",
+        "kosten": 4000000,
+        "wert": 9500,
+        "image": "https://www.steal-a-brainrot.de/images/te-te-te-sahur.webp",
+        "fixed_sets": []
+    },
+    "Rhino Helicopterino": {
+        "rarity": "Mythical",
+        "kosten": 4100000,
+        "wert": 11000,
+        "image": "https://www.steal-a-brainrot.de/images/rhino-helicopterino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Magi Ribbitini": {
+        "rarity": "Mythical",
+        "kosten": 4200000,
+        "wert": 11500,
+        "image": "https://www.steal-a-brainrot.de/images/magi-ribbitini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Tracoducotulu Delapeladustuz": {
+        "rarity": "Mythical",
+        "kosten": 3000000,
+        "wert": 12000,
+        "image": "https://www.steal-a-brainrot.de/images/tracoducotulu-delapeladustuz.webp",
+        "fixed_sets": []
+    },
+    "Jingle Jingle Sahur": {
+        "rarity": "Mythical",
+        "kosten": 4300000,
+        "wert": 12200,
+        "image": "https://www.steal-a-brainrot.de/images/jingle-jingle-sahur.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Los Noobinis": {
+        "rarity": "Mythical",
+        "kosten": 4300000,
+        "wert": 12500,
+        "image": "https://www.steal-a-brainrot.de/images/los-noobinis.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Cachorrito Melonito": {
+        "rarity": "Mythical",
+        "kosten": 4400000,
+        "wert": 13000,
+        "image": "https://www.steal-a-brainrot.de/images/cachorrito-melonito.webp",
+        "fixed_sets": []
+    },
+    "Spongini Quackini": {
+        "rarity": "Mythical",
+        "kosten": 4400000,
+        "wert": 13000,
+        "image": "https://www.steal-a-brainrot.de/images/spongini-quackini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Carloo": {
+        "rarity": "Mythical",
+        "kosten": 4500000,
+        "wert": 13500,
+        "image": "https://www.steal-a-brainrot.de/images/carloo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Elefanto Frigo": {
+        "rarity": "Mythical",
+        "kosten": 4600000,
+        "wert": 14000,
+        "image": "https://www.steal-a-brainrot.de/images/elefanto-frigo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Carrotini Brainini": {
+        "rarity": "Mythical",
+        "kosten": 4700000,
+        "wert": 15000,
+        "image": "https://www.steal-a-brainrot.de/images/carrotini-brainini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Mythic Lucky Block"
+        ]
+    },
+    "Centrucci Nuclucci": {
+        "rarity": "Mythical",
+        "kosten": 4800000,
+        "wert": 15500,
+        "image": "https://www.steal-a-brainrot.de/images/centrucci-nuclucci.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Toiletto Focaccino": {
+        "rarity": "Mythical",
+        "kosten": 4800000,
+        "wert": 16000,
+        "image": "https://www.steal-a-brainrot.de/images/toiletto-focaccino.webp",
+        "fixed_sets": []
+    },
+    "Jacko Spaventosa": {
+        "rarity": "Mythical",
+        "kosten": 4800000,
+        "wert": 16200,
+        "image": "https://www.steal-a-brainrot.de/images/jacko-spaventosa.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Bananito Bandito": {
+        "rarity": "Mythical",
+        "kosten": 4900000,
+        "wert": 16500,
+        "image": "https://www.steal-a-brainrot.de/images/bananito-bandito.webp",
+        "fixed_sets": [],
+        "type": [
+            "Mythic Lucky Block"
+        ]
+    },
+    "Tree Tree Tree Sahur": {
+        "rarity": "Mythical",
+        "kosten": 4900000,
+        "wert": 17000,
+        "image": "https://www.steal-a-brainrot.de/images/tree-tree-tree-sahur.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Fizzy Soda": {
+        "rarity": "Brainrot God",
+        "kosten": 4900000,
+        "wert": 17200,
+        "image": "https://www.steal-a-brainrot.de/images/fizzy-soda.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Cocofanto Elefanto": {
+        "rarity": "Brainrot God",
+        "kosten": 5000000,
+        "wert": 17500,
+        "image": "https://www.steal-a-brainrot.de/images/cocofanto-elefanto.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Antonio": {
+        "rarity": "Brainrot God",
+        "kosten": 6000000,
+        "wert": 18500,
+        "image": "https://www.steal-a-brainrot.de/images/antonio.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Girafa Celestre": {
+        "rarity": "Brainrot God",
+        "kosten": 7500000,
+        "wert": 20000,
+        "image": "https://www.steal-a-brainrot.de/images/girafa-celestre.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Gattatino Nyanino": {
+        "rarity": "Brainrot God",
+        "kosten": 7500000,
+        "wert": 35000,
+        "image": "https://www.steal-a-brainrot.de/images/gattatino-nyanino.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Chihuanini Taconini": {
+        "rarity": "Brainrot God",
+        "kosten": 8500000,
+        "wert": 45000,
+        "image": "https://www.steal-a-brainrot.de/images/chihuanini-taconini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Taco Lucky Block"
+        ]
+    },
+    "Tralalero Tralala": {
+        "rarity": "Brainrot God",
+        "kosten": 10000000,
+        "wert": 50000,
+        "image": "https://www.steal-a-brainrot.de/images/tralalero-tralala.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Matteo": {
+        "rarity": "Brainrot God",
+        "kosten": 10000000,
+        "wert": 50000,
+        "image": "https://www.steal-a-brainrot.de/images/matteo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Los Crocodillitos": {
+        "rarity": "Brainrot God",
+        "kosten": 12500000,
+        "wert": 55000,
+        "image": "https://www.steal-a-brainrot.de/images/los-crocodillitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Tigroligre Frutonni": {
+        "rarity": "Brainrot God",
+        "kosten": 25000000,
+        "wert": 60000,
+        "image": "https://www.steal-a-brainrot.de/images/tigroligre-frutonni.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Brainrot Lucky Block"
+        ]
+    },
+    "Money Money Man": {
+        "rarity": "Brainrot God",
+        "kosten": 17500000,
+        "wert": 65000,
+        "image": "https://www.steal-a-brainrot.de/images/money-money-man.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Espresso Signora": {
+        "rarity": "Brainrot God",
+        "kosten": 25000000,
+        "wert": 70000,
+        "image": "https://www.steal-a-brainrot.de/images/espresso-signora.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Odin Din Din Dun": {
+        "rarity": "Brainrot God",
+        "kosten": 15000000,
+        "wert": 75000,
+        "image": "https://www.steal-a-brainrot.de/images/odin-din-din-dun.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Tipi Topi Taco": {
+        "rarity": "Brainrot God",
+        "kosten": 20000000,
+        "wert": 75000,
+        "image": "https://www.steal-a-brainrot.de/images/tipi-topi-taco.webp",
+        "fixed_sets": []
+    },
+    "Unclito Samito": {
+        "rarity": "Brainrot God",
+        "kosten": 20000000,
+        "wert": 75000,
+        "image": "https://www.steal-a-brainrot.de/images/unclito-samito.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Alessio": {
+        "rarity": "Brainrot God",
+        "kosten": 17500000,
+        "wert": 85000,
+        "image": "https://www.steal-a-brainrot.de/images/alessio.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Tukanno Bananno": {
+        "rarity": "Brainrot God",
+        "kosten": 22500000,
+        "wert": 100000,
+        "image": "https://www.steal-a-brainrot.de/images/tukanno-bananno.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Orcalero Orcala": {
+        "rarity": "Brainrot God",
+        "kosten": 25000000,
+        "wert": 100000,
+        "image": "https://www.steal-a-brainrot.de/images/orcalero-orcala.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing",
+            "Brainrot Lucky Block"
+        ]
+    },
+    "Tralalita Tralala": {
+        "rarity": "Brainrot God",
+        "kosten": 20000000,
+        "wert": 100000,
+        "image": "https://www.steal-a-brainrot.de/images/tralalita-tralala.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Vampira Cappucina": {
+        "rarity": "Brainrot God",
+        "kosten": 24500000,
+        "wert": 125000,
+        "image": "https://www.steal-a-brainrot.de/images/vampira-cappucina.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Extinct Ballerina": {
+        "rarity": "Brainrot God",
+        "kosten": 23500000,
+        "wert": 125000,
+        "image": "https://www.steal-a-brainrot.de/images/extinct-ballerina.webp",
+        "fixed_sets": []
+    },
+    "Trenostruzzo Turbo 3000": {
+        "rarity": "Brainrot God",
+        "kosten": 25000000,
+        "wert": 150000,
+        "image": "https://www.steal-a-brainrot.de/images/trenostruzzo-turbo-3000.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Urubini Flamenguini": {
+        "rarity": "Brainrot God",
+        "kosten": 30000000,
+        "wert": 150000,
+        "image": "https://www.steal-a-brainrot.de/images/urubini-flamenguini.webp",
+        "fixed_sets": []
+    },
+    "Jacko Jack Jack": {
+        "rarity": "Brainrot God",
+        "kosten": 30000000,
+        "wert": 150000,
+        "image": "https://www.steal-a-brainrot.de/images/jacko-jack-jack.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Capi Taco": {
+        "rarity": "Brainrot God",
+        "kosten": 31000000,
+        "wert": 155000,
+        "image": "https://www.steal-a-brainrot.de/images/capi-taco.webp",
+        "fixed_sets": []
+    },
+    "Los Chihuaninis": {
+        "rarity": "Brainrot God",
+        "kosten": 32000000,
+        "wert": 160000,
+        "image": "https://www.steal-a-brainrot.de/images/los-chihuaninis.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Taco Blocks"
+        ]
+    },
+    "Gattito Tacoto": {
+        "rarity": "Brainrot God",
+        "kosten": 32500000,
+        "wert": 160000,
+        "image": "https://www.steal-a-brainrot.de/images/gattito-tacoto.webp",
+        "fixed_sets": [],
+        "type": [
+            "Taco Lucky Block"
+        ]
+    },
+    "Trippi Troppi Troppa Trippa": {
+        "rarity": "Brainrot God",
+        "kosten": 30000000,
+        "wert": 175000,
+        "image": "https://www.steal-a-brainrot.de/images/trippi-troppi-troppa-trippa.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Las Capuchinas": {
+        "rarity": "Brainrot God",
+        "kosten": 82500000,
+        "wert": 185000,
+        "image": "https://www.steal-a-brainrot.de/images/las-capuchinas.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Ballerino Lololo": {
+        "rarity": "Brainrot God",
+        "kosten": 35000000,
+        "wert": 200000,
+        "image": "https://www.steal-a-brainrot.de/images/ballerino-lololo.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Bulbito Bandito Traktorito": {
+        "rarity": "Brainrot God",
+        "kosten": 25000000,
+        "wert": 205000,
+        "image": "https://www.steal-a-brainrot.de/images/bulbito-bandito-traktorito.webp",
+        "fixed_sets": [],
+        "type": [
+            "Brainrot Lucky Block"
+        ]
+    },
+    "Los Tungtungtungcitos": {
+        "rarity": "Brainrot God",
+        "kosten": 37500000,
+        "wert": 210000,
+        "image": "https://www.steal-a-brainrot.de/images/los-tungtungtungcitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse",
+            "Los Lucky Block"
+        ]
+    },
+    "Pakrahmatmamat": {
+        "rarity": "Brainrot God",
+        "kosten": 37500000,
+        "wert": 215000,
+        "image": "https://www.steal-a-brainrot.de/images/pakrahmatmamat.webp",
+        "fixed_sets": []
+    },
+    "Ballerina Peppermintina": {
+        "rarity": "Brainrot God",
+        "kosten": 37500000,
+        "wert": 215000,
+        "image": "https://www.steal-a-brainrot.de/images/ballerina-peppermintina.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Los Bombinitos": {
+        "rarity": "Brainrot God",
+        "kosten": 50000000,
+        "wert": 225000,
+        "image": "https://www.steal-a-brainrot.de/images/los-bombinitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block",
+            "Los Lucky Block"
+        ]
+    },
+    "Brr es Teh Patipum": {
+        "rarity": "Brainrot God",
+        "kosten": 40000000,
+        "wert": 225000,
+        "image": "https://www.steal-a-brainrot.de/images/brr-es-teh-patipum.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Piccione Macchina": {
+        "rarity": "Brainrot God",
+        "kosten": 40000000,
+        "wert": 225000,
+        "image": "https://www.steal-a-brainrot.de/images/piccione-macchina.webp",
+        "fixed_sets": []
+    },
+    "Pakrahmatmatina": {
+        "rarity": "Brainrot God",
+        "kosten": 40500000,
+        "wert": 225000,
+        "image": "https://www.steal-a-brainrot.de/images/pakrahmatmatina.webp",
+        "fixed_sets": []
+    },
+    "Bombardini Tortinii": {
+        "rarity": "Brainrot God",
+        "kosten": 50000000,
+        "wert": 225000,
+        "image": "https://www.steal-a-brainrot.de/images/bombardini-tortinii.webp",
+        "fixed_sets": []
+    },
+    "Tractoro Dinosauro": {
+        "rarity": "Brainrot God",
+        "kosten": 42500000,
+        "wert": 230000,
+        "image": "https://www.steal-a-brainrot.de/images/tractoro-dinosauro.webp",
+        "fixed_sets": []
+    },
+    "Los Orcalitos": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 235000,
+        "image": "https://www.steal-a-brainrot.de/images/los-orcalitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing",
+            "Los Lucky Block"
+        ]
+    },
+    "Crabbo-Limonetta": {
+        "rarity": "Brainrot God",
+        "kosten": 46000000,
+        "wert": 235000,
+        "image": "https://www.steal-a-brainrot.de/images/crabbo-limonetta.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing",
+            "Secret Lucky Block"
+        ]
+    },
+    "Cacasito Satalito": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 240000,
+        "image": "https://www.steal-a-brainrot.de/images/cacasito-satalito.webp",
+        "fixed_sets": []
+    },
+    "Aquanaut": {
+        "rarity": "Brainrot God",
+        "kosten": 45500000,
+        "wert": 245000,
+        "image": "https://www.steal-a-brainrot.de/images/aquanaut.webp",
+        "fixed_sets": []
+    },
+    "Orcalita Orcala": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 240000,
+        "image": "https://www.steal-a-brainrot.de/images/orcalita-orcala.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Mummy Ambalabu": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 250000,
+        "image": "https://www.steal-a-brainrot.de/images/mummy-ambalabu.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "Squalanana": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 250000,
+        "image": "https://www.steal-a-brainrot.de/images/squalanana.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Corn Corn Corn Sahur": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 250000,
+        "image": "https://www.steal-a-brainrot.de/images/corn-corn-corn-sahur.webp",
+        "fixed_sets": []
+    },
+    "Tartaruga Cisterna": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 250000,
+        "image": "https://www.steal-a-brainrot.de/images/tartaruga-cisterna.webp",
+        "fixed_sets": []
+    },
+    "Snailenzo": {
+        "rarity": "Brainrot God",
+        "kosten": 45000000,
+        "wert": 250000,
+        "image": "https://www.steal-a-brainrot.de/images/snailenzo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Dug dug dug": {
+        "rarity": "Brainrot God",
+        "kosten": 45500000,
+        "wert": 255000,
+        "image": "https://www.steal-a-brainrot.de/images/dug-dug-dug.webp",
+        "fixed_sets": []
+    },
+    "Ginger Globo": {
+        "rarity": "Brainrot God",
+        "kosten": 45700000,
+        "wert": 257500,
+        "image": "https://www.steal-a-brainrot.de/images/ginger-globo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Yeti Claus": {
+        "rarity": "Brainrot God",
+        "kosten": 45700000,
+        "wert": 257500,
+        "image": "https://www.steal-a-brainrot.de/images/yeti-claus.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Granchiello Spiritell": {
+        "rarity": "Brainrot God",
+        "kosten": 46000000,
+        "wert": 260000,
+        "image": "https://www.steal-a-brainrot.de/images/granchiello-spiritell.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Los Tipi Tacos": {
+        "rarity": "Brainrot God",
+        "kosten": 46000000,
+        "wert": 260000,
+        "image": "https://www.steal-a-brainrot.de/images/los-tipi-tacos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Taco Lucky Block",
+            "Los Lucky Block"
+        ]
+    },
+    "Tootini Shrimpini": {
+        "rarity": "Brainrot God",
+        "kosten": 46000000,
+        "wert": 260000,
+        "image": "https://www.steal-a-brainrot.de/images/tootini-shrimpini.webp",
+        "fixed_sets": [],
+        "type": [
+            "26"
+        ]
+    },
+    "Frio Ninja": {
+        "rarity": "Brainrot God",
+        "kosten": 46500000,
+        "wert": 265000,
+        "image": "https://www.steal-a-brainrot.de/images/frio-ninja.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Buho de Noelo": {
+        "rarity": "Brainrot God",
+        "kosten": 46750000,
+        "wert": 267500,
+        "image": "https://www.steal-a-brainrot.de/images/buho-de-noelo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Boba Panda": {
+        "rarity": "Brainrot God",
+        "kosten": 47000000,
+        "wert": 270000,
+        "image": "https://www.steal-a-brainrot.de/images/boba-panda.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Piccionetta Machina": {
+        "rarity": "Brainrot God",
+        "kosten": 47000000,
+        "wert": 270000,
+        "image": "https://www.steal-a-brainrot.de/images/piccionetta-machina.webp",
+        "fixed_sets": []
+    },
+    "Mastodontico Telepiedone": {
+        "rarity": "Brainrot God",
+        "kosten": 47500000,
+        "wert": 275000,
+        "image": "https://www.steal-a-brainrot.de/images/mastodontico-telepiedone.webp",
+        "fixed_sets": [],
+        "type": [
+            "Brainrot Lucky Block"
+        ]
+    },
+    "Bambu Bambu Sahur": {
+        "rarity": "Brainrot God",
+        "kosten": 47500000,
+        "wert": 275000,
+        "image": "https://www.steal-a-brainrot.de/images/bambu-bambu-sahur.webp",
+        "fixed_sets": []
+    },
+    "Los Gattitos": {
+        "rarity": "Brainrot God",
+        "kosten": 47500000,
+        "wert": 275000,
+        "image": "https://www.steal-a-brainrot.de/images/los-gattitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Taco Blocks"
+        ]
+    },
+    "Chrismasmamat": {
+        "rarity": "Brainrot God",
+        "kosten": 47700000,
+        "wert": 277500,
+        "image": "https://www.steal-a-brainrot.de/images/chrismasmamat.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Noo La Polizia": {
+        "rarity": "Brainrot God",
+        "kosten": 67000000,
+        "wert": 280000,
+        "image": "https://www.steal-a-brainrot.de/images/noo-la-polizia.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Anpali Babel": {
+        "rarity": "Brainrot God",
+        "kosten": 48000000,
+        "wert": 280000,
+        "image": "https://www.steal-a-brainrot.de/images/anpali-babel.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Cappuccino Clownino": {
+        "rarity": "Brainrot God",
+        "kosten": 48500000,
+        "wert": 285000,
+        "image": "https://www.steal-a-brainrot.de/images/cappuccino-clownino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "Brasilini Berimbini": {
+        "rarity": "Brainrot God",
+        "kosten": 55500000,
+        "wert": 285000,
+        "image": "https://www.steal-a-brainrot.de/images/brasilini-berimbini.webp",
+        "fixed_sets": []
+    },
+    "Belula Beluga": {
+        "rarity": "Brainrot God",
+        "kosten": 60000000,
+        "wert": 290000,
+        "image": "https://www.steal-a-brainrot.de/images/belula-beluga.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Krupuk Pagi Pagi": {
+        "rarity": "Brainrot God",
+        "kosten": 60000000,
+        "wert": 290000,
+        "image": "https://www.steal-a-brainrot.de/images/krupuk-pagi-pagi.webp",
+        "fixed_sets": []
+    },
+    "Skull Skull Skull": {
+        "rarity": "Brainrot God",
+        "kosten": 60000000,
+        "wert": 290000,
+        "image": "https://www.steal-a-brainrot.de/images/skull-skull-skull.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Cocoa Assassino": {
+        "rarity": "Brainrot God",
+        "kosten": 61000000,
+        "wert": 291000,
+        "image": "https://www.steal-a-brainrot.de/images/cocoa-assassino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Tentacolo Tecnico": {
+        "rarity": "Brainrot God",
+        "kosten": 62500000,
+        "wert": 292500,
+        "image": "https://www.steal-a-brainrot.de/images/tentacolo-tecnico.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing",
+            "Witch"
+        ]
+    },
+    "Ginger Cisterna": {
+        "rarity": "Brainrot God",
+        "kosten": 63500000,
+        "wert": 293500,
+        "image": "https://www.steal-a-brainrot.de/images/ginger-cisterna.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Pop Pop Sahur": {
+        "rarity": "Brainrot God",
+        "kosten": 63500000,
+        "wert": 293500,
+        "image": "https://www.steal-a-brainrot.de/images/pop-pop-sahur.webp",
+        "fixed_sets": [],
+        "type": [
+            "Brainrot Lucky Block"
+        ]
+    },
+    "Pandanini Frostini": {
+        "rarity": "Brainrot God",
+        "kosten": 64000000,
+        "wert": 294000,
+        "image": "https://www.steal-a-brainrot.de/images/pandanini-frostini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Dolphini Jetskini": {
+        "rarity": "Brainrot God",
+        "kosten": 64500000,
+        "wert": 294500,
+        "image": "https://www.steal-a-brainrot.de/images/dolphini-jetskini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Karkerkar Kurkur": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 300000,
+        "image": "https://www.steal-a-brainrot.de/images/karkerkar-kurkur.webp",
+        "fixed_sets": []
+    },
+    "Los Matteos": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 300000,
+        "image": "https://www.steal-a-brainrot.de/images/los-matteos.webp",
+        "fixed_sets": []
+    },
+    "Bisonte Giuppitere": {
+        "rarity": "Secret",
+        "kosten": 75000000,
+        "wert": 300000,
+        "image": "https://www.steal-a-brainrot.de/images/bisonte-giuppitere.webp",
+        "fixed_sets": []
+    },
+    "La Vacca Saturno Saturnita": {
+        "rarity": "Secret",
+        "kosten": 50000000,
+        "wert": 300000,
+        "image": "https://www.steal-a-brainrot.de/images/la-vacca-saturno-saturnita.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Trenostruzzo Turbo 4000": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 310000,
+        "image": "https://www.steal-a-brainrot.de/images/trenostruzzo-turbo-4000.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Jackorilla": {
+        "rarity": "Secret",
+        "kosten": 80000000,
+        "wert": 315000,
+        "image": "https://www.steal-a-brainrot.de/images/jackorilla.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "Sammyni Spyderini": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 350000,
+        "image": "https://www.steal-a-brainrot.de/images/sammyni-spyderini.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Torrtuginni Dragonfrutini": {
+        "rarity": "Secret",
+        "kosten": 50000000,
+        "wert": 350000,
+        "image": "https://www.steal-a-brainrot.de/images/torrtuginni-dragonfrutini.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Secret Lucky Block"
+        ]
+    },
+    "Dul Dul Dul": {
+        "rarity": "Secret",
+        "kosten": 150000000,
+        "wert": 375000,
+        "image": "https://www.steal-a-brainrot.de/images/dul-dul-dul.webp",
+        "fixed_sets": []
+    },
+    "Blackhole Goat": {
+        "rarity": "Secret",
+        "kosten": 75000000,
+        "wert": 400000,
+        "image": "https://www.steal-a-brainrot.de/images/blackhole-goat.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Chachechi": {
+        "rarity": "Secret",
+        "kosten": 85000000,
+        "wert": 400000,
+        "image": "https://www.steal-a-brainrot.de/images/chachechi.webp",
+        "fixed_sets": []
+    },
+    "Agarrini la Palini": {
+        "rarity": "Secret",
+        "kosten": 80000000,
+        "wert": 425000,
+        "image": "https://www.steal-a-brainrot.de/images/agarrini-la-palini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Los Spyderinis": {
+        "rarity": "Secret",
+        "kosten": 250000000,
+        "wert": 550000,
+        "image": "https://www.steal-a-brainrot.de/images/los-spyderinis.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Fragola La La La": {
+        "rarity": "Secret",
+        "kosten": 125000000,
+        "wert": 450000,
+        "image": "https://www.steal-a-brainrot.de/images/fragola-la-la-la.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Extinct Tralalero": {
+        "rarity": "Secret",
+        "kosten": 125000000,
+        "wert": 450000,
+        "image": "https://www.steal-a-brainrot.de/images/extinct-tralalero.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "La Cucaracha": {
+        "rarity": "Secret",
+        "kosten": 110000000,
+        "wert": 475000,
+        "image": "https://www.steal-a-brainrot.de/images/la-cucaracha.webp",
+        "fixed_sets": []
+    },
+    "Los Tortus": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-tortus.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Lucky Block"
+        ]
+    },
+    "Los Tralaleritos": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-tralaleritos.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Vulturino Skeletono": {
+        "rarity": "Secret",
+        "kosten": 110000000,
+        "wert": 500000,
+        "image": "https://www.steal-a-brainrot.de/images/vulturino-skeletono.webp",
+        "fixed_sets": []
+    },
+    "Boatito Auratito": {
+        "rarity": "Secret",
+        "kosten": 115000000,
+        "wert": 525000,
+        "image": "https://www.steal-a-brainrot.de/images/boatito-auratito.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Zombie Tralala": {
+        "rarity": "Secret",
+        "kosten": 100000000,
+        "wert": 500000,
+        "image": "https://www.steal-a-brainrot.de/images/zombie-tralala.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Guerriro Digitale": {
+        "rarity": "Secret",
+        "kosten": 120000000,
+        "wert": 550000,
+        "image": "https://www.steal-a-brainrot.de/images/guerriro-digitale.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Yess My Examine": {
+        "rarity": "Secret",
+        "kosten": 130000000,
+        "wert": 575000,
+        "image": "https://www.steal-a-brainrot.de/images/yess-my-examine.webp",
+        "fixed_sets": []
+    },
+    "La Karkerkar Combinasion": {
+        "rarity": "Secret",
+        "kosten": 160000000,
+        "wert": 600000,
+        "image": "https://www.steal-a-brainrot.de/images/la-karkerkar-combinasion.webp",
+        "fixed_sets": []
+    },
+    "Reindeer Tralala": {
+        "rarity": "Secret",
+        "kosten": 160000000,
+        "wert": 600000,
+        "image": "https://www.steal-a-brainrot.de/images/reindeer-tralala.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "La Vacca Prese Presente": {
+        "rarity": "Secret",
+        "kosten": 160000000,
+        "wert": 600000,
+        "image": "https://www.steal-a-brainrot.de/images/la-vacca-prese-presente.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Extinct Matteo": {
+        "rarity": "Secret",
+        "kosten": 140000000,
+        "wert": 625000,
+        "image": "https://www.steal-a-brainrot.de/images/extinct-matteo.webp",
+        "fixed_sets": []
+    },
+    "Rocco Disco": {
+        "rarity": "Secret",
+        "kosten": 150000000,
+        "wert": 650000,
+        "image": "https://www.steal-a-brainrot.de/images/rocco-disco.webp",
+        "fixed_sets": [],
+        "type": [
+            "26"
+        ]
+    },
+    "Las Tralaleritas": {
+        "rarity": "Secret",
+        "kosten": 150000000,
+        "wert": 650000,
+        "image": "https://www.steal-a-brainrot.de/images/las-tralaleritas.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Pumpkini Spyderini": {
+        "rarity": "Secret",
+        "kosten": 165000000,
+        "wert": 650000,
+        "image": "https://www.steal-a-brainrot.de/images/pumpkini-spyderini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "Frankentteo": {
+        "rarity": "Secret",
+        "kosten": 170000000,
+        "wert": 700000,
+        "image": "https://www.steal-a-brainrot.de/images/frankentteo.webp",
+        "fixed_sets": []
+    },
+    "Job Job Job Sahur": {
+        "rarity": "Secret",
+        "kosten": 175000000,
+        "wert": 700000,
+        "image": "https://www.steal-a-brainrot.de/images/job-job-job-sahur.webp",
+        "fixed_sets": []
+    },
+    "Los Trios": {
+        "rarity": "Secret",
+        "kosten": 175000000,
+        "wert": 700000,
+        "image": "https://www.steal-a-brainrot.de/images/los-trios.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Karker Sahur": {
+        "rarity": "Secret",
+        "kosten": 185000000,
+        "wert": 725000,
+        "image": "https://www.steal-a-brainrot.de/images/karker-sahur.webp",
+        "fixed_sets": []
+    },
+    "Las Vaquitas Saturnitas": {
+        "rarity": "Secret",
+        "kosten": 160000000,
+        "wert": 750000,
+        "image": "https://www.steal-a-brainrot.de/images/las-vaquitas-saturnitas.webp",
+        "fixed_sets": []
+    },
+    "Los Karkeritos": {
+        "rarity": "Secret",
+        "kosten": 200000000,
+        "wert": 750000,
+        "image": "https://www.steal-a-brainrot.de/images/los-karkeritos.webp",
+        "fixed_sets": []
+    },
+    "Santteo": {
+        "rarity": "Secret",
+        "kosten": 210000000,
+        "wert": 800000,
+        "image": "https://www.steal-a-brainrot.de/images/santteo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "La Vacca Jacko Linterino": {
+        "rarity": "Secret",
+        "kosten": 225000000,
+        "wert": 850000,
+        "image": "https://www.steal-a-brainrot.de/images/la-vacca-jacko-linterino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Triplito Tralaleritos": {
+        "rarity": "Secret",
+        "kosten": 230000000,
+        "wert": 875000,
+        "image": "https://www.steal-a-brainrot.de/images/triplito-tralaleritos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Trickolino": {
+        "rarity": "Secret",
+        "kosten": 235000000,
+        "wert": 900000,
+        "image": "https://www.steal-a-brainrot.de/images/trickolino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "GOAT": {
+        "rarity": "Secret",
+        "kosten": 237500000,
+        "wert": 950000,
+        "image": "https://www.steal-a-brainrot.de/images/goat.webp",
+        "fixed_sets": []
+    },
+    "Giftini Spyderini": {
+        "rarity": "Secret",
+        "kosten": 235000000,
+        "wert": 999999,
+        "image": "https://www.steal-a-brainrot.de/images/giftini-spyderini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Graipuss Medussi": {
+        "rarity": "Secret",
+        "kosten": 250000000,
+        "wert": 1000000,
+        "image": "https://www.steal-a-brainrot.de/images/graipuss-medussi.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Perrito Burrito": {
+        "rarity": "Secret",
+        "kosten": 250000000,
+        "wert": 1000000,
+        "image": "https://www.steal-a-brainrot.de/images/perrito-burrito.webp",
+        "fixed_sets": []
+    },
+    "1x1x1x1": {
+        "rarity": "Secret",
+        "kosten": 255000000,
+        "wert": 1100000,
+        "image": "https://www.steal-a-brainrot.de/images/1x1x1x1.webp",
+        "fixed_sets": []
+    },
+    "Los Cucarachas": {
+        "rarity": "Secret",
+        "kosten": 300000000,
+        "wert": 1200000,
+        "image": "https://www.steal-a-brainrot.de/images/los-cucarachas.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Taco Blocks"
+        ]
+    },
+    "Please My Present": {
+        "rarity": "Secret",
+        "kosten": 350000000,
+        "wert": 1300000,
+        "image": "https://www.steal-a-brainrot.de/images/please-my-present.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Cuadramat and Pakrahmatmamat": {
+        "rarity": "Secret",
+        "kosten": 400000000,
+        "wert": 1400000,
+        "image": "https://www.steal-a-brainrot.de/images/cuadramat-and-pakrahmatmamat.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Bunnyman": {
+        "rarity": "Secret",
+        "kosten": 500000000,
+        "wert": 1500000,
+        "image": "https://www.steal-a-brainrot.de/images/bunnyman.webp",
+        "fixed_sets": [],
+        "type": [
+            "Gingerbread Town"
+        ]
+    },
+    "Tung Tung Tung Sahur": {
+        "rarity": "Secret",
+        "kosten": 500000000,
+        "wert": 1500000,
+        "image": "https://www.steal-a-brainrot.de/images/tung-tung-tung-sahur.webp",
+        "fixed_sets": []
+    },
+    "Los Jobcitos": {
+        "rarity": "Secret",
+        "kosten": 500000000,
+        "wert": 1500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-jobcitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Lucky Block"
+        ]
+    },
+    "Nooo My Hotspot": {
+        "rarity": "Secret",
+        "kosten": 500000000,
+        "wert": 1500000,
+        "image": "https://www.steal-a-brainrot.de/images/nooo-my-hotspot.webp",
+        "fixed_sets": []
+    },
+    "Noo My Examine": {
+        "rarity": "Secret",
+        "kosten": 525000000,
+        "wert": 1700000,
+        "image": "https://www.steal-a-brainrot.de/images/noo-my-examine.webp",
+        "fixed_sets": []
+    },
+    "Telemorte": {
+        "rarity": "Secret",
+        "kosten": 550000000,
+        "wert": 2000000,
+        "image": "https://www.steal-a-brainrot.de/images/telemorte.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "La Sahur Combinasion": {
+        "rarity": "Secret",
+        "kosten": 550000000,
+        "wert": 2000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-sahur-combinasion.webp",
+        "fixed_sets": []
+    },
+    "List List List Sahur": {
+        "rarity": "Secret",
+        "kosten": 550000000,
+        "wert": 1800000,
+        "image": "https://www.steal-a-brainrot.de/images/list-list-list-sahur.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "To to to Sahur": {
+        "rarity": "Secret",
+        "kosten": 575000000,
+        "wert": 2200000,
+        "image": "https://www.steal-a-brainrot.de/images/to-to-to-sahur.webp",
+        "fixed_sets": []
+    },
+    "Pirulitoita Bicicleteira": {
+        "rarity": "Secret",
+        "kosten": 600000000,
+        "wert": 2500000,
+        "image": "https://www.steal-a-brainrot.de/images/pirulitoita-bicicleteira.webp",
+        "fixed_sets": []
+    },
+    "Pot Hotspot": {
+        "rarity": "Secret",
+        "kosten": 500000000,
+        "wert": 2500000,
+        "image": "https://www.steal-a-brainrot.de/images/pot-hotspot.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Secret Lucky Block"
+        ]
+    },
+    "25": {
+        "rarity": "Secret",
+        "kosten": 600000000,
+        "wert": 2500000,
+        "image": "https://www.steal-a-brainrot.de/images/25.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Santa Hotspot": {
+        "rarity": "Secret",
+        "kosten": 625000000,
+        "wert": 2600000,
+        "image": "https://www.steal-a-brainrot.de/images/santa-hotspot.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Horegini Boom": {
+        "rarity": "Secret",
+        "kosten": 650000000,
+        "wert": 2700000,
+        "image": "https://www.steal-a-brainrot.de/images/horegini-boom.webp",
+        "fixed_sets": []
+    },
+    "Pot Pumpkin": {
+        "rarity": "Secret",
+        "kosten": 700000000,
+        "wert": 3000000,
+        "image": "https://www.steal-a-brainrot.de/images/pot-pumpkin.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Quesadilla Crocodila": {
+        "rarity": "Secret",
+        "kosten": 700000000,
+        "wert": 3000000,
+        "image": "https://www.steal-a-brainrot.de/images/quesadilla-crocodila.webp",
+        "fixed_sets": [],
+        "type": [
+            "Taco Lucky Block"
+        ]
+    },
+    "Naughty Naughty": {
+        "rarity": "Secret",
+        "kosten": 700000000,
+        "wert": 3000000,
+        "image": "https://www.steal-a-brainrot.de/images/naughty-naughty.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Mi Gatito": {
+        "rarity": "Secret",
+        "kosten": 725000000,
+        "wert": 3200000,
+        "image": "https://www.steal-a-brainrot.de/images/mi-gatito.webp",
+        "fixed_sets": []
+    },
+    "Bunito Bunito Spinito": {
+        "rarity": "Secret",
+        "kosten": 900000000,
+        "wert": 3000000,
+        "image": "https://www.steal-a-brainrot.de/images/bunito-bunito-spinito.webp",
+        "fixed_sets": [],
+        "type": [
+            "26"
+        ]
+    },
+    "Ho Ho Ho Sahur": {
+        "rarity": "Secret",
+        "kosten": 725000000,
+        "wert": 3200000,
+        "image": "https://www.steal-a-brainrot.de/images/ho-ho-ho-sahur.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Brunito Marsito": {
+        "rarity": "Secret",
+        "kosten": 750000000,
+        "wert": 3500000,
+        "image": "https://www.steal-a-brainrot.de/images/brunito-marsito.webp",
+        "fixed_sets": []
+    },
+    "Quesadillo Vampiro": {
+        "rarity": "Secret",
+        "kosten": 750000000,
+        "wert": 3500000,
+        "image": "https://www.steal-a-brainrot.de/images/quesadillo-vampiro.webp",
+        "fixed_sets": []
+    },
+    "Chicleteira Bicicleteira": {
+        "rarity": "Secret",
+        "kosten": 750000000,
+        "wert": 3500000,
+        "image": "https://www.steal-a-brainrot.de/images/chicleteira-bicicleteira.webp",
+        "fixed_sets": []
+    },
+    "Chicleteirina Bicicleteirina": {
+        "rarity": "Secret",
+        "kosten": 850000000,
+        "wert": 4000000,
+        "image": "https://www.steal-a-brainrot.de/images/chicleteirina-bicicleteirina.webp",
+        "fixed_sets": []
+    },
+    "Chill Puppy": {
+        "rarity": "Secret",
+        "kosten": 850000000,
+        "wert": 4000000,
+        "image": "https://www.steal-a-brainrot.de/images/chill-puppy.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Burrito Bandito": {
+        "rarity": "Secret",
+        "kosten": 850000000,
+        "wert": 4000000,
+        "image": "https://www.steal-a-brainrot.de/images/burrito-bandito.webp",
+        "fixed_sets": [],
+        "type": [
+            "Taco Lucky Block"
+        ]
+    },
+    "Los Quesadillas": {
+        "rarity": "Secret",
+        "kosten": 875000000,
+        "wert": 4500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-quesadillas.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Taco Blocks"
+        ]
+    },
+    "Arcadopus": {
+        "rarity": "Secret",
+        "kosten": 900000000,
+        "wert": 5000000,
+        "image": "https://www.steal-a-brainrot.de/images/arcadopus.webp",
+        "fixed_sets": []
+    },
+    "Noo My Candy": {
+        "rarity": "Secret",
+        "kosten": 900000000,
+        "wert": 5000000,
+        "image": "https://www.steal-a-brainrot.de/images/noo-my-candy.webp",
+        "fixed_sets": []
+    },
+    "Los Nooo My Hotspotsitos": {
+        "rarity": "Secret",
+        "kosten": 1000000000,
+        "wert": 5500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-nooo-my-hotspotsitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Taco Lucky Block"
+        ]
+    },
+    "Noo My Present": {
+        "rarity": "Secret",
+        "kosten": 1100000000,
+        "wert": 6000000,
+        "image": "https://www.steal-a-brainrot.de/images/noo-my-present.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Rang Ring Bus": {
+        "rarity": "Secret",
+        "kosten": 1100000000,
+        "wert": 6000000,
+        "image": "https://www.steal-a-brainrot.de/images/rang-ring-bus.webp",
+        "fixed_sets": []
+    },
+    "Los Mi Gatitos": {
+        "rarity": "Secret",
+        "kosten": 1200000000,
+        "wert": 6500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-mi-gatitos.webp",
+        "fixed_sets": []
+    },
+    "Guest 666": {
+        "rarity": "Secret",
+        "kosten": 1100000000,
+        "wert": 6666667,
+        "image": "https://www.steal-a-brainrot.de/images/guest-666.webp",
+        "fixed_sets": []
+    },
+    "Los Chicleteiras": {
+        "rarity": "Secret",
+        "kosten": 1200000000,
+        "wert": 7000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-chicleteiras.webp",
+        "fixed_sets": []
+    },
+    "67": {
+        "rarity": "Secret",
+        "kosten": 1200000000,
+        "wert": 7500000,
+        "image": "https://www.steal-a-brainrot.de/images/67.webp",
+        "fixed_sets": [],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Donkeyturbo Express": {
+        "rarity": "Secret",
+        "kosten": 1200000000,
+        "wert": 7500000,
+        "image": "https://www.steal-a-brainrot.de/images/donkeyturbo-express.webp",
+        "fixed_sets": [],
+        "type": [
+            "Gingerbread Town"
+        ]
+    },
+    "Los Burritos": {
+        "rarity": "Secret",
+        "kosten": 1400000000,
+        "wert": 8500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-burritos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Taco Blocks"
+        ]
+    },
+    "La Grande Combinasion": {
+        "rarity": "Secret",
+        "kosten": 1000000000,
+        "wert": 10000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-grande-combinasion.webp",
+        "fixed_sets": ["Candy"],
+        "type": [
+            "Admin Lucky Block"
+        ]
+    },
+    "Los 25": {
+        "rarity": "Secret",
+        "kosten": 1500000000,
+        "wert": 10000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-25.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Mariachi Corazoni": {
+        "rarity": "Secret",
+        "kosten": 1700000000,
+        "wert": 12500000,
+        "image": "https://www.steal-a-brainrot.de/images/mariachi-corazoni.webp",
+        "fixed_sets": []
+    },
+    "Swag Soda": {
+        "rarity": "Secret",
+        "kosten": 1800000000,
+        "wert": 13000000,
+        "image": "https://www.steal-a-brainrot.de/images/swag-soda.webp",
+        "fixed_sets": []
+    },
+    "Chimnino": {
+        "rarity": "Secret",
+        "kosten": 1900000000,
+        "wert": 14000000,
+        "image": "https://www.steal-a-brainrot.de/images/chimnino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Chicleteira Noelteira": {
+        "rarity": "Secret",
+        "kosten": 2000000000,
+        "wert": 15000000,
+        "image": "https://www.steal-a-brainrot.de/images/chicleteira-noelteira.webp",
+        "fixed_sets": []
+    },
+    "Nuclearo Dinossauro": {
+        "rarity": "Secret",
+        "kosten": 2500000000,
+        "wert": 15000000,
+        "image": "https://www.steal-a-brainrot.de/images/nuclearo-dinossauro.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Los Combinasionas": {
+        "rarity": "Secret",
+        "kosten": 2000000000,
+        "wert": 15000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-combinasionas.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse",
+            "Los Lucky Block"
+        ]
+    },
+    "Fishino Clownino": {
+        "rarity": "Secret",
+        "kosten": 2100000000,
+        "wert": 15500000,
+        "image": "https://www.steal-a-brainrot.de/images/fishino-clownino.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Tacorita Bicicleta": {
+        "rarity": "Secret",
+        "kosten": 2200000000,
+        "wert": 16500000,
+        "image": "https://www.steal-a-brainrot.de/images/tacorita-bicicleta.webp",
+        "fixed_sets": []
+    },
+    "Spinny Hammy": {
+        "rarity": "Secret",
+        "kosten": 2300000000,
+        "wert": 17000000,
+        "image": "https://www.steal-a-brainrot.de/images/spinny-hammy.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Las Sis": {
+        "rarity": "Secret",
+        "kosten": 2500000000,
+        "wert": 17500000,
+        "image": "https://www.steal-a-brainrot.de/images/las-sis.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft"
+        ]
+    },
+    "Los Planitos": {
+        "rarity": "Secret",
+        "kosten": 2700000000,
+        "wert": 18500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-planitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "Los Hotspotsitos": {
+        "rarity": "Secret",
+        "kosten": 3000000000,
+        "wert": 20000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-hotspotsitos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Los Spooky Combinasionas": {
+        "rarity": "Secret",
+        "kosten": 3000000000,
+        "wert": 20000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-spooky-combinasionas.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "Los Jolly Combinasionas": {
+        "rarity": "Secret",
+        "kosten": 3000000000,
+        "wert": 20000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-jolly-combinasionas.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Money Money Puggy": {
+        "rarity": "Secret",
+        "kosten": 2600000000,
+        "wert": 21000000,
+        "image": "https://www.steal-a-brainrot.de/images/money-money-puggy.webp",
+        "fixed_sets": []
+    },
+    "Los Mobilis": {
+        "rarity": "Secret",
+        "kosten": 2700000000,
+        "wert": 22000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-mobilis.webp",
+        "fixed_sets": []
+    },
+    "Celularcini Viciosini": {
+        "rarity": "Secret",
+        "kosten": 2700000000,
+        "wert": 22500000,
+        "image": "https://www.steal-a-brainrot.de/images/celularcini-viciosini.webp",
+        "fixed_sets": []
+    },
+    "Los 67": {
+        "rarity": "Secret",
+        "kosten": 2700000000,
+        "wert": 22500000,
+        "image": "https://www.steal-a-brainrot.de/images/los-67.webp",
+        "fixed_sets": [],
+        "type": [
+            "Los Lucky Block"
+        ]
+    },
+    "Los Candies": {
+        "rarity": "Secret",
+        "kosten": 3000000000,
+        "wert": 23000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-candies.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "La Extinct Grande": {
+        "rarity": "Secret",
+        "kosten": 3200000000,
+        "wert": 23500000,
+        "image": "https://www.steal-a-brainrot.de/images/la-extinct-grande.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Los Bros": {
+        "rarity": "Secret",
+        "kosten": 2600000000,
+        "wert": 24000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-bros.webp",
+        "fixed_sets": []
+    },
+    "Bacuru and Egguru": {
+        "rarity": "Secret",
+        "kosten": 3800000000,
+        "wert": 24000000,
+        "image": "https://www.steal-a-brainrot.de/images/bacuru-and-egguru.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "La Spooky Grande": {
+        "rarity": "Secret",
+        "kosten": 2900000000,
+        "wert": 24500000,
+        "image": "https://www.steal-a-brainrot.de/images/la-spooky-grande.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Chipso and Queso": {
+        "rarity": "Secret",
+        "kosten": 2500000000,
+        "wert": 25000000,
+        "image": "https://www.steal-a-brainrot.de/images/chipso-and-queso.webp",
+        "fixed_sets": []
+    },
+    "Chillin Chili": {
+        "rarity": "Secret",
+        "kosten": 2500000000,
+        "wert": 25000000,
+        "image": "https://www.steal-a-brainrot.de/images/chillin-chili.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Mieteteira Bicicleteira": {
+        "rarity": "Secret",
+        "kosten": 2500000000,
+        "wert": 25000000,
+        "image": "https://www.steal-a-brainrot.de/images/mieteteira-bicicleteira.webp",
+        "fixed_sets": []
+    },
+    "Money Money Reindeer": {
+        "rarity": "Secret",
+        "kosten": 2500000000,
+        "wert": 25000000,
+        "image": "https://www.steal-a-brainrot.de/images/money-money-reindeer.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Tuff Toucan": {
+        "rarity": "Secret",
+        "kosten": 2700000000,
+        "wert": 26000000,
+        "image": "https://www.steal-a-brainrot.de/images/tuff-toucan.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Gobblino Uniciclino": {
+        "rarity": "Secret",
+        "kosten": 2800000000,
+        "wert": 27500000,
+        "image": "https://www.steal-a-brainrot.de/images/gobblino-uniciclino.webp",
+        "fixed_sets": []
+    },
+    "Tralaledon": {
+        "rarity": "Secret",
+        "kosten": 3000000000,
+        "wert": 27500000,
+        "image": "https://www.steal-a-brainrot.de/images/tralaledon.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft",
+            "Fishing"
+        ]
+    },
+    "Esok Sekolah": {
+        "rarity": "Secret",
+        "kosten": 3500000000,
+        "wert": 30000000,
+        "image": "https://www.steal-a-brainrot.de/images/esok-sekolah.webp",
+        "fixed_sets": [],
+        "type": [
+            "Secret Lucky Block"
+        ]
+    },
+    "W or L": {
+        "rarity": "Secret",
+        "kosten": 3000000000,
+        "wert": 30000000,
+        "image": "https://www.steal-a-brainrot.de/images/w-or-l.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Los Puggies": {
+        "rarity": "Secret",
+        "kosten": 3500000000,
+        "wert": 30000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-puggies.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "La Jolly Grande": {
+        "rarity": "Secret",
+        "kosten": 3500000000,
+        "wert": 30000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-jolly-grande.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Los Primos": {
+        "rarity": "Secret",
+        "kosten": 3700000000,
+        "wert": 31000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-primos.webp",
+        "fixed_sets": [],
+        "type": [
+            "Craft",
+            "Fishing"
+        ]
+    },
+    "Eviledon": {
+        "rarity": "Secret",
+        "kosten": 3800000000,
+        "wert": 31500000,
+        "image": "https://www.steal-a-brainrot.de/images/eviledon.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing", 
+            "Witch"
+        ]
+    },
+    "Los Tacoritas": {
+        "rarity": "Secret",
+        "kosten": 4000000000,
+        "wert": 32000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-tacoritas.webp",
+        "fixed_sets": []
+    },
+    "Tang Tang Keletang": {
+        "rarity": "Secret",
+        "kosten": 4500000000,
+        "wert": 32500000,
+        "image": "https://www.steal-a-brainrot.de/images/tang-tang-keletang.webp",
+        "fixed_sets": []
+    },
+    "Ketupat Kepat": {
+        "rarity": "Secret",
+        "kosten": 5000000000,
+        "wert": 35000000,
+        "image": "https://www.steal-a-brainrot.de/images/ketupat-kepat.webp",
+        "fixed_sets": []
+    },
+    "La Taco Combinasion": {
+        "rarity": "Secret",
+        "kosten": 5000000000,
+        "wert": 36000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-taco-combinasion.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Tictac Sahur": {
+        "rarity": "Secret",
+        "kosten": 6000000000,
+        "wert": 37500000,
+        "image": "https://www.steal-a-brainrot.de/images/tictac-sahur.webp",
+        "fixed_sets": []
+    },
+    "Orcaledon": {
+        "rarity": "Secret",
+        "kosten": 7000000000,
+        "wert": 40000000,
+        "image": "https://www.steal-a-brainrot.de/images/orcaledon.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing",
+            "Trader"
+        ]
+    },
+    "La Supreme Combinasion": {
+        "rarity": "Secret",
+        "kosten": 7000000000,
+        "wert": 40000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-supreme-combinasion.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Swaggy Bros": {
+        "rarity": "Secret",
+        "kosten": 7000000000,
+        "wert": 40000000,
+        "image": "https://www.steal-a-brainrot.de/images/swaggy-bros.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Ketchuru and Musturu": {
+        "rarity": "Secret",
+        "kosten": 7500000000,
+        "wert": 42500000,
+        "image": "https://www.steal-a-brainrot.de/images/ketchuru-and-musturu.webp",
+        "fixed_sets": []
+    },
+    "Lavadorito Spinito": {
+        "rarity": "Secret",
+        "kosten": 30000000000,
+        "wert": 45000000,
+        "image": "https://www.steal-a-brainrot.de/images/lavadorito-spinito.webp",
+        "fixed_sets": []
+    },
+    "Jolly Jolly Sahur": {
+        "rarity": "Secret",
+        "kosten": 8000000000,
+        "wert": 45000000,
+        "image": "https://www.steal-a-brainrot.de/images/jolly-jolly-sahur.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Garama and Madundung": {
+        "rarity": "Secret",
+        "kosten": 10000000000,
+        "wert": 50000000,
+        "image": "https://www.steal-a-brainrot.de/images/garama-and-madundung.webp",
+        "fixed_sets": ["Candy"]
+    },
+    "Spaghetti Tualetti": {
+        "rarity": "Secret",
+        "kosten": 15000000000,
+        "wert": 60000000,
+        "image": "https://www.steal-a-brainrot.de/images/spaghetti-tualetti.webp",
+        "fixed_sets": [],
+        "type": [
+            "Secret Lucky Block"
+        ]
+    },
+    "Festive 67": {
+        "rarity": "Secret",
+        "kosten": 16000000000,
+        "wert": 67000000,
+        "image": "https://www.steal-a-brainrot.de/images/festive-67.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "Los Spaghettis": {
+        "rarity": "Secret",
+        "kosten": 20000000000,
+        "wert": 70000000,
+        "image": "https://www.steal-a-brainrot.de/images/los-spaghettis.webp",
+        "fixed_sets": []
+    },
+    "Ginger Gerat": {
+        "rarity": "Secret",
+        "kosten": 22500000000,
+        "wert": 75000000,
+        "image": "https://www.steal-a-brainrot.de/images/ginger-gerat.webp",
+        "fixed_sets": [],
+        "type": [
+            "Limited"
+        ]
+    },
+    "La Ginger Sekolah": {
+        "rarity": "Secret",
+        "kosten": 23000000000,
+        "wert": 75000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-ginger-sekolah.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Spooky and Pumpky": {
+        "rarity": "Secret",
+        "kosten": 25000000000,
+        "wert": 80000000,
+        "image": "https://www.steal-a-brainrot.de/images/spooky-and-pumpky.webp",
+        "fixed_sets": []
+    },
+    "Fragrama and Chocrama": {
+        "rarity": "Secret",
+        "kosten": 40000000000,
+        "wert": 100000000,
+        "image": "https://www.steal-a-brainrot.de/images/fragrama-and-chocrama.webp",
+        "fixed_sets": [],
+        "type": [
+            "Trader"
+        ]
+    },
+    "La Casa Boo": {
+        "rarity": "Secret",
+        "kosten": 40000000000,
+        "wert": 100000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-casa-boo.webp",
+        "fixed_sets": [],
+        "type": [
+            "Spooky Lucky Block"
+        ]
+    },
+    "La Secret Combinasion": {
+        "rarity": "Secret",
+        "kosten": 50000000000,
+        "wert": 125000000,
+        "image": "https://www.steal-a-brainrot.de/images/la-secret-combinasion.webp",
+        "fixed_sets": [],
+        "type": [
+            "Secret Lucky Block"
+        ]
+    },
+    "Reinito Sleighito": {
+        "rarity": "Secret",
+        "kosten": 6000000000,
+        "wert": 140000000,
+        "image": "https://www.steal-a-brainrot.de/images/reinito-sleighito.webp",
+        "fixed_sets": [],
+        "type": [
+            "Festive Lucky Block"
+        ]
+    },
+    "Ketupat Bros": {
+        "rarity": "Secret",
+        "kosten": 65000000000,
+        "wert": 145000000,
+        "image": "https://www.steal-a-brainrot.de/images/ketupat-bros.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Burguru And Fryuro": {
+        "rarity": "Secret",
+        "kosten": 75000000000,
+        "wert": 150000000,
+        "image": "https://www.steal-a-brainrot.de/images/burguro-and-fryuro.webp",
+        "fixed_sets": []
+    },
+    "Cooki and Milki": {
+        "rarity": "Secret",
+        "kosten": 100000000000,
+        "wert": 155000000,
+        "image": "https://www.steal-a-brainrot.de/images/cooki-and-milki.webp",
+        "fixed_sets": [],
+        "type": [
+            "Xmas"
+        ]
+    },
+    "Capitano Moby": {
+        "rarity": "Secret",
+        "kosten": 125000000000,
+        "wert": 160000000,
+        "image": "https://www.steal-a-brainrot.de/images/capitano-moby.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fishing"
+        ]
+    },
+    "Popcuru and Fizzuru": {
+        "rarity": "Secret",
+        "kosten": 135000000000,
+        "wert": 170000000,
+        "image": "https://www.steal-a-brainrot.de/images/popcuru-and-fizzuru.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Headless Horseman": {
+        "rarity": "Secret",
+        "kosten": 150000000000,
+        "wert": 175000000,
+        "image": "https://www.steal-a-brainrot.de/images/headless-horseman.webp",
+        "fixed_sets": [],
+        "type": [
+            "Witch"
+        ]
+    },
+    "Cerberus": {
+        "rarity": "Secret",
+        "kosten": 150000000000,
+        "wert": 175000000,
+        "image": "https://www.steal-a-brainrot.de/images/cerberus.webp",
+        "fixed_sets": [],
+        "type": [
+            "Secret Lucky Block"
+        ]
+    },
+    "Dragon Cannelloni": {
+        "rarity": "Secret",
+        "kosten": 250000000000,
+        "wert": 250000000,
+        "image": "https://www.steal-a-brainrot.de/images/dragon-cannelloni.webp",
+        "fixed_sets": []
+    },
+    "Dragon Gingerini": {
+        "rarity": "Secret",
+        "kosten": 300000000000,
+        "wert": 300000000,
+        "image": "https://www.steal-a-brainrot.de/images/dragon-gingerini.webp",
+        "fixed_sets": [],
+        "type": [
+            "Gingerbread Town"
+        ]
+    },
+    "Hydra Dragon Cannelloni": {
+        "rarity": "Secret",
+        "kosten": 350000000000,
+        "wert": 350000000,
+        "image": "https://www.steal-a-brainrot.de/images/hydra-dragon-cannelloni.webp",
+        "fixed_sets": [],
+        "type": [
+            "Fuse"
+        ]
+    },
+    "Skibidi Toilet": {
+        "rarity": "OG",
+        "kosten": 450000000000,
+        "wert": 450000000,
+        "image": "https://www.steal-a-brainrot.de/images/skibidi-toilet.webp",
+        "fixed_sets": []
+    },
+    "Meowl": {
+        "rarity": "OG",
+        "kosten": 550000000000,
+        "wert": 550000000,
+        "image": "https://www.steal-a-brainrot.de/images/meowl.webp",
+        "fixed_sets": []
+    },
+    "Strawberry Elephant": {
+        "rarity": "OG",
+        "kosten": 750000000000,
+        "wert": 750000000,
+        "image": "https://www.steal-a-brainrot.de/images/strawberry-elephant.webp",
+        "fixed_sets": []
+    }
+}

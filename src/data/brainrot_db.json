@@ -3380,6 +3380,17 @@
     "image": "https://www.steal-a-brainrot.de/images/los-spaghettis.webp",
     "fixed_sets": []
   },
+  "Sammyni Fattini": {
+    "id": 350,
+    "rarity": "Secret",
+    "kosten": 20000000000,
+    "wert": 70000000,
+    "image": "https://www.steal-a-brainrot.de/images/sammyni-fattini.webp",
+    "fixed_sets": [],
+    "type": [
+      "Admin Lucky Block"
+    ]
+  },
   "La Ginger Sekolah": {
     "id": 327,
     "rarity": "Secret",
@@ -3409,6 +3420,17 @@
     "wert": 80000000,
     "image": "https://www.steal-a-brainrot.de/images/spooky-and-pumpky.webp",
     "fixed_sets": []
+  },
+  "La Food Combinasion": {
+    "id": 351,
+    "rarity": "Secret",
+    "kosten": 30000000000,
+    "wert": 90000000,
+    "image": "https://www.steal-a-brainrot.de/images/la-food-combinasion.webp",
+    "fixed_sets": [],
+    "type": [
+      "Taco Lucky Block"
+    ]
   },
   "La Casa Boo": {
     "id": 330,
@@ -3452,6 +3474,17 @@
     "fixed_sets": [],
     "type": [
       "Secret Lucky Block"
+    ]
+  },
+  "Los Amigos": {
+    "id": 352,
+    "rarity": "Secret",
+    "kosten": 55000000000,
+    "wert": 130000000,
+    "image": "https://www.steal-a-brainrot.de/images/los-amigos.webp",
+    "fixed_sets": [],
+    "type": [
+      "Los Taco Blocks"
     ]
   },
   "Reinito Sleighito": {
@@ -3629,38 +3662,5 @@
     "wert": 750000000,
     "image": "https://www.steal-a-brainrot.de/images/strawberry-elephant.webp",
     "fixed_sets": []
-  },
-  "Sammyni Fattini": {
-    "id": 350,
-    "rarity": "Secret",
-    "kosten": 20000000000,
-    "wert": 70000000,
-    "image": "https://www.steal-a-brainrot.de/images/sammyni-fattini.webp",
-    "fixed_sets": [],
-    "type": [
-      "Admin Lucky Block"
-    ]
-  },
-  "La Food Combinasion": {
-    "id": 351,
-    "rarity": "Secret",
-    "kosten": 30000000000,
-    "wert": 90000000,
-    "image": "https://www.steal-a-brainrot.de/images/la-food-combinasion.webp",
-    "fixed_sets": [],
-    "type": [
-      "Taco Lucky Block"
-    ]
-  },
-  "Los Amigos": {
-    "id": 352,
-    "rarity": "Secret",
-    "kosten": 55000000000,
-    "wert": 130000000,
-    "image": "https://www.steal-a-brainrot.de/images/los-amigos.webp",
-    "fixed_sets": [],
-    "type": [
-      "Los Taco Blocks"
-    ]
   }
 }

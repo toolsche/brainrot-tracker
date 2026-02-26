@@ -3435,7 +3435,7 @@
   "Los Sekolahs": {
     "id": 331,
     "rarity": "Secret",
-    "kosten": 44000000000,
+    "kosten": 45000000000,
     "wert": 110000000,
     "image": "https://www.steal-a-brainrot.de/images/los-sekolahs.webp",
     "fixed_sets": [],
@@ -3629,5 +3629,38 @@
     "wert": 750000000,
     "image": "https://www.steal-a-brainrot.de/images/strawberry-elephant.webp",
     "fixed_sets": []
+  },
+  "Sammyni Fattini": {
+    "id": 350,
+    "rarity": "Secret",
+    "kosten": 20000000000,
+    "wert": 70000000,
+    "image": "https://www.steal-a-brainrot.de/images/sammyni-fattini.webp",
+    "fixed_sets": [],
+    "type": [
+      "Admin Lucky Block"
+    ]
+  },
+  "La Food Combinasion": {
+    "id": 351,
+    "rarity": "Secret",
+    "kosten": 30000000000,
+    "wert": 90000000,
+    "image": "https://www.steal-a-brainrot.de/images/la-food-combinasion.webp",
+    "fixed_sets": [],
+    "type": [
+      "Taco Lucky Block"
+    ]
+  },
+  "Los Amigos": {
+    "id": 352,
+    "rarity": "Secret",
+    "kosten": 55000000000,
+    "wert": 130000000,
+    "image": "https://www.steal-a-brainrot.de/images/los-amigos.webp",
+    "fixed_sets": [],
+    "type": [
+      "Los Taco Blocks"
+    ]
   }
 }

@@ -59,6 +59,7 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState<'wert' | 'name'>('wert');
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
+  const [exportModal, setExportModal] = useState<string | null>(null);
   const [shareStatus, setShareStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
   const [showWhoHas, setShowWhoHas] = useState(false);
   const [whoHasData, setWhoHasData] = useState<Record<string, any> | null>(null);
@@ -113,9 +114,12 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
       .join('\n\n');
 
     const finalDocument = `${titles[type]}\n\n${hasItems ? itemListText : "Keine Items gefunden."}`;
-    navigator.clipboard.writeText(finalDocument);
-    setCopyFeedback(type);
-    setTimeout(() => setCopyFeedback(null), 2000);
+    navigator.clipboard.writeText(finalDocument).then(() => {
+      setCopyFeedback(type);
+      setTimeout(() => setCopyFeedback(null), 2000);
+    }).catch(() => {
+      setExportModal(finalDocument);
+    });
   };
 
   const handleShare = async () => {
@@ -386,6 +390,19 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
           </div>
         )}
       </main>
+
+      {/* EXPORT FALLBACK MODAL (wenn clipboard nicht verfügbar) */}
+      {exportModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={() => setExportModal(null)}>
+          <div className="bg-[#1e2321] border border-white/10 rounded-xl p-6 w-[520px] flex flex-col gap-4" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <h3 className="font-black uppercase tracking-widest text-sm">Export — bitte kopieren</h3>
+              <button onClick={() => setExportModal(null)} className="text-white/40 hover:text-white text-lg leading-none">✕</button>
+            </div>
+            <textarea readOnly value={exportModal} className="bg-black/40 border border-white/10 rounded p-3 text-xs font-mono text-white/80 h-64 resize-none outline-none" onClick={e => (e.target as HTMLTextAreaElement).select()} />
+          </div>
+        </div>
+      )}
 
       {/* SYNC MODAL */}
       {showSync && (

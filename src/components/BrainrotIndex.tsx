@@ -6,6 +6,14 @@ const nameToId: Record<string, number> = Object.fromEntries(
   Object.entries(brainrotData).map(([name, info]) => [name, (info as any).id as number])
 );
 
+function mergeStats(local: Record<string, string[]>, server: Record<string, string[]>): Record<string, string[]> {
+  const merged = { ...local };
+  for (const [key, variants] of Object.entries(server)) {
+    merged[key] = [...new Set([...(merged[key] ?? []), ...variants])];
+  }
+  return merged;
+}
+
 function migrateStorage(key: string): Record<string, string[]> {
   const raw = localStorage.getItem(key);
   if (!raw) return {};
@@ -60,7 +68,6 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
   const [sortOrder, setSortOrder] = useState<'wert' | 'name'>('wert');
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
   const [exportModal, setExportModal] = useState<string | null>(null);
-  const [shareStatus, setShareStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
   const [showWhoHas, setShowWhoHas] = useState(false);
   const [whoHasData, setWhoHasData] = useState<Record<string, any> | null>(null);
   const [whoHasLoading, setWhoHasLoading] = useState(false);
@@ -74,10 +81,34 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
   const [userStats, setUserStats] = useState<Record<string, string[]>>(() => migrateStorage(lsIndex));
   const [tradingStats, setTradingStats] = useState<Record<string, string[]>>(() => migrateStorage(lsTrading));
 
+  // Auto-Load: eigene Daten vom Server holen wenn Discord-Login bekannt
+  useEffect(() => {
+    if (!discordUserId) return;
+    fetch(`/.proxy/api/userdata/${discordUserId}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data) return;
+        setUserStats(prev => mergeStats(prev, data.index ?? {}));
+        setTradingStats(prev => mergeStats(prev, data.trading ?? {}));
+      })
+      .catch(() => {});
+  }, [discordUserId]);
+
+  // Auto-Save: localStorage + debounced Server-Sync nach Änderungen
   useEffect(() => {
     localStorage.setItem(lsIndex, JSON.stringify(userStats));
     localStorage.setItem(lsTrading, JSON.stringify(tradingStats));
-  }, [userStats, tradingStats, lsIndex, lsTrading]);
+    if (!discordUserId) return;
+    const timer = setTimeout(() => {
+      fetch('/.proxy/api/userdata', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ discordUserId, username, avatar, index: userStats, trading: tradingStats }),
+      }).catch(() => {});
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [userStats, tradingStats, lsIndex, lsTrading, discordUserId, username, avatar]);
+
 
   // --- EXPORT FUNKTION ---
   const handleExport = (type: 'fehlend' | 'index' | 'besitz') => {
@@ -122,21 +153,6 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
     });
   };
 
-  const handleShare = async () => {
-    if (!discordUserId) return;
-    setShareStatus('loading');
-    try {
-      const res = await fetch('/.proxy/api/userdata', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ discordUserId, username, avatar, index: userStats, trading: tradingStats }),
-      });
-      setShareStatus(res.ok ? 'ok' : 'error');
-    } catch {
-      setShareStatus('error');
-    }
-    setTimeout(() => setShareStatus('idle'), 3000);
-  };
 
   const handleFetchWhoHas = async () => {
     setShowWhoHas(true);
@@ -235,37 +251,42 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
   return (
     <div className="flex h-screen bg-[#08090a] text-white font-sans overflow-hidden">
       
-      {/* SIDEBAR (unverändert) */}
-      <aside className="w-52 bg-[#0c0d0f] border-r border-white/5 flex flex-col p-4 gap-2">
-        <div className="mb-6 px-2 border-b border-white/5 pb-4">
+      {/* SIDEBAR — nur auf Desktop */}
+      <aside className="hidden lg:flex w-52 bg-[#0c0d0f] border-r border-white/5 flex-col p-4">
+        <div className="mb-4 px-2 border-b border-white/5 pb-4 flex-shrink-0">
           <h1 className="text-xl font-black italic uppercase tracking-tighter">Brainrot-Tracker</h1>
         </div>
-        {VARIANTS.map(v => (
-          <button key={v} onClick={() => setActiveTab(v)} className={`py-2 px-4 rounded font-black uppercase text-[10px] tracking-widest transition-all border-b-4 ${activeTab === v ? `${VARIANT_STYLES[v].active} scale-105` : 'bg-black/40 border-black/60 opacity-50 hover:opacity-100'}`}>
-            <span className={activeTab === v ? VARIANT_STYLES[v].text : ''}>{v}</span>
-          </button>
-        ))}
+        <div className="flex flex-col gap-2 overflow-y-auto flex-1">
+          {VARIANTS.map(v => (
+            <button key={v} onClick={() => setActiveTab(v)} className={`py-2 px-4 rounded font-black uppercase text-[10px] tracking-widest transition-all border-b-4 flex-shrink-0 ${activeTab === v ? `${VARIANT_STYLES[v].active} scale-105` : 'bg-black/40 border-black/60 opacity-50 hover:opacity-100'}`}>
+              <span className={activeTab === v ? VARIANT_STYLES[v].text : ''}>{v}</span>
+            </button>
+          ))}
+        </div>
       </aside>
 
       {/* MAIN VIEW */}
-      <main className="flex-1 flex flex-col bg-[#141617]">
-        
-        {/* HEADER MIT EXPORT BUTTON */}
-        <header className="h-16 flex items-center justify-between px-8 bg-[#0c0d0f]/50 border-b border-white/5">
-          <div className="flex items-center gap-4">
-            <h2 className={`text-2xl font-black uppercase italic ${VARIANT_STYLES[activeTab].text}`}>{activeTab}</h2>
+      <main className="flex-1 min-w-0 flex flex-col bg-[#141617]">
 
-            <span className="text-lg font-black text-white/70 ml-2">
+        {/* DISCORD-OVERLAY SPACER — oben im Hochformat, rechts im Querformat */}
+        <div className="lg:hidden h-10 flex-shrink-0 bg-[#0c0d0f]/50" />
+
+        {/* HEADER MIT EXPORT BUTTON */}
+        <header className="flex flex-wrap items-center justify-between gap-2 px-4 md:px-8 py-2 bg-[#0c0d0f]/50 border-b border-white/5">
+          <div className="flex items-center gap-2 md:gap-4 flex-wrap">
+            <h2 className={`text-lg md:text-2xl font-black uppercase italic ${VARIANT_STYLES[activeTab].text}`}>{activeTab}</h2>
+
+            <span className="text-base md:text-lg font-black text-white/70">
               {collectedCount}<span className="text-white/30">/{tabItems.length}</span>
             </span>
 
-            <div className="flex bg-black/60 rounded-lg p-1 border border-white/10 ml-4">
-              <button onClick={() => setAppMode('INDEX')} className={`px-4 py-1 text-[9px] font-black uppercase rounded ${appMode === 'INDEX' ? 'bg-[#3be364] text-black' : 'text-zinc-500'}`}>Im Index</button>
-              <button onClick={() => setAppMode('TRADING')} className={`px-4 py-1 text-[9px] font-black uppercase rounded ${appMode === 'TRADING' ? 'bg-indigo-600 text-white' : 'text-zinc-500'}`}>Im Besitz</button>
+            <div className="flex bg-black/60 rounded-lg p-1 border border-white/10">
+              <button onClick={() => setAppMode('INDEX')} className={`px-3 py-1 text-[9px] font-black uppercase rounded ${appMode === 'INDEX' ? 'bg-[#3be364] text-black' : 'text-zinc-500'}`}>Im Index</button>
+              <button onClick={() => setAppMode('TRADING')} className={`px-3 py-1 text-[9px] font-black uppercase rounded ${appMode === 'TRADING' ? 'bg-indigo-600 text-white' : 'text-zinc-500'}`}>Im Besitz</button>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 md:gap-2 overflow-x-auto pb-1 md:pb-0 min-w-0">
             {([
               { type: 'fehlend', label: 'Fehlende Export',   active: 'bg-red-700' },
               { type: 'index',   label: 'Im Index Export',   active: 'bg-green-700' },
@@ -284,26 +305,9 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
               </button>
             ))}
             
-            <button
-              onClick={handleFetchWhoHas}
-              className={`px-3 py-1 rounded text-[9px] font-black uppercase border transition-all ${showWhoHas ? 'bg-indigo-700 border-indigo-500 text-white' : 'border-white/10 bg-black/40 text-zinc-300 hover:bg-zinc-700'}`}
-            >
-              🔍 Wer hat's?
-            </button>
+            {/* Wer hat's? — ausgeblendet bis Funktionalität fertig */}
+            <button onClick={handleFetchWhoHas} className="hidden" />
 
-            {discordUserId && (
-              <button
-                onClick={handleShare}
-                disabled={shareStatus === 'loading'}
-                className={`px-3 py-1 rounded text-[9px] font-black uppercase border border-white/10 transition-all ${
-                  shareStatus === 'ok'    ? 'bg-green-800 text-white' :
-                  shareStatus === 'error' ? 'bg-red-800 text-white' :
-                  'bg-black/40 text-zinc-300 hover:bg-zinc-700'
-                }`}
-              >
-                {shareStatus === 'loading' ? '...' : shareStatus === 'ok' ? '✓ Geteilt' : shareStatus === 'error' ? '✕ Fehler' : '↑ Teilen'}
-              </button>
-            )}
 
             <button
               onClick={() => { setSyncMode('export'); setShowSync(true); }}
@@ -327,9 +331,11 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
           </div>
         </header>
 
+        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden w-full custom-scrollbar">
+
         {showWhoHas ? (
           /* WER HAT WAS ICH BRAUCHE */
-          <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
+          <div className="p-3 lg:p-6 pb-16 lg:pb-6">
             <div className="flex items-center gap-4 mb-6">
               <button onClick={() => setShowWhoHas(false)} className="text-white/40 hover:text-white text-sm font-black">← Zurück</button>
               <h3 className="font-black uppercase tracking-widest text-sm">Wer hat meine fehlenden <span className={VARIANT_STYLES[activeTab].text}>{activeTab}</span>-Items?</h3>
@@ -371,14 +377,14 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
           </div>
         ) : (
           /* GRID */
-          <div className="flex-1 overflow-y-auto p-6 grid grid-cols-[repeat(auto-fill,minmax(150px,200px))] gap-3 justify-center content-start custom-scrollbar">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '8px', padding: '12px', paddingBottom: '64px', paddingRight: '44px', alignContent: 'start' }}>
             {filteredItems.map(item => {
               const key = String(item.id);
               const isActive = appMode === 'INDEX' ? userStats[key]?.includes(activeTab) : tradingStats[key]?.includes(activeTab);
               const displayTier = item.rarity || "Common";
 
               return (
-                <div key={item.id} onClick={() => toggleItem(item.id)} className={`relative bg-[#1e2321] border-2 rounded-lg p-2 flex flex-col cursor-pointer transition-all ${isActive ? 'border-white/10 opacity-100 shadow-lg' : 'border-white/5 opacity-40 grayscale'}`} style={{ maxWidth: '200px' }}>
+                <div key={item.id} onClick={() => toggleItem(item.id)} className={`relative bg-[#1e2321] border-2 rounded-lg p-2 flex flex-col cursor-pointer transition-all min-w-0 ${isActive ? 'border-white/10 opacity-100 shadow-lg' : 'border-white/5 opacity-40 grayscale'}`}>
                   <h3 className="font-black text-[11px] text-white mb-1 text-center leading-tight min-h-[2em] line-clamp-2">{item.name}</h3>
                   <div className="aspect-square bg-black/30 rounded flex items-center justify-center p-2 relative overflow-hidden mb-1">
                     <img src={item.image.replace('https://www.steal-a-brainrot.de', '/img-proxy')} alt={item.name} className={`max-h-full object-contain ${!isActive ? 'brightness-0' : ''}`} />
@@ -389,12 +395,23 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
             })}
           </div>
         )}
+
+        </div>{/* flex-1 scroll container */}
       </main>
+
+      {/* MOBILE BOTTOM NAV — Varianten */}
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0c0d0f] border-t border-white/5 flex overflow-x-auto gap-1 p-2 z-40" >
+        {VARIANTS.map(v => (
+          <button key={v} onClick={() => setActiveTab(v)} className={`flex-shrink-0 py-1.5 px-3 rounded font-black uppercase text-[9px] tracking-widest transition-all border-b-2 ${activeTab === v ? `${VARIANT_STYLES[v].active} scale-105` : 'bg-black/40 border-black/60 opacity-50'}`}>
+            <span className={activeTab === v ? VARIANT_STYLES[v].text : ''}>{v}</span>
+          </button>
+        ))}
+      </nav>
 
       {/* EXPORT FALLBACK MODAL (wenn clipboard nicht verfügbar) */}
       {exportModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={() => setExportModal(null)}>
-          <div className="bg-[#1e2321] border border-white/10 rounded-xl p-6 w-[520px] flex flex-col gap-4" onClick={e => e.stopPropagation()}>
+          <div className="bg-[#1e2321] border border-white/10 rounded-xl p-6 w-[min(90vw,520px)] flex flex-col gap-4" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between">
               <h3 className="font-black uppercase tracking-widest text-sm">Export — bitte kopieren</h3>
               <button onClick={() => setExportModal(null)} className="text-white/40 hover:text-white text-lg leading-none">✕</button>
@@ -407,7 +424,7 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
       {/* SYNC MODAL */}
       {showSync && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={() => setShowSync(false)}>
-          <div className="bg-[#1e2321] border border-white/10 rounded-xl p-6 w-[480px] flex flex-col gap-4" onClick={e => e.stopPropagation()}>
+          <div className="bg-[#1e2321] border border-white/10 rounded-xl p-6 w-[min(90vw,480px)] flex flex-col gap-4" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between">
               <h3 className="font-black uppercase tracking-widest text-sm">Daten Sync</h3>
               <button onClick={() => setShowSync(false)} className="text-white/40 hover:text-white text-lg leading-none">✕</button>

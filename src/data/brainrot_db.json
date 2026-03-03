@@ -632,17 +632,6 @@
       "Fuse"
     ]
   },
-  "Signore Carapace": {
-    "id": 61,
-    "rarity": "Legendary",
-    "kosten": 320000,
-    "wert": 1300,
-    "image": "https://www.steal-a-brainrot.de/images/signore-carapace.webp",
-    "fixed_sets": [],
-    "type": [
-      "Craft"
-    ]
-  },
   "Sigma Boy": {
     "id": 60,
     "rarity": "Legendary",
@@ -991,17 +980,6 @@
       "Admin Lucky Block"
     ]
   },
-  "Elefanto Frigo": {
-    "id": 93,
-    "rarity": "Mythical",
-    "kosten": 4600000,
-    "wert": 14000,
-    "image": "https://www.steal-a-brainrot.de/images/elefanto-frigo.webp",
-    "fixed_sets": [],
-    "type": [
-      "Craft"
-    ]
-  },
   "Carrotini Brainini": {
     "id": 94,
     "rarity": "Mythical",
@@ -1084,17 +1062,6 @@
     "image": "https://www.steal-a-brainrot.de/images/cocofanto-elefanto.webp",
     "fixed_sets": [
       "Candy"
-    ]
-  },
-  "Antonio": {
-    "id": 102,
-    "rarity": "Brainrot God",
-    "kosten": 6000000,
-    "wert": 18500,
-    "image": "https://www.steal-a-brainrot.de/images/antonio.webp",
-    "fixed_sets": [],
-    "type": [
-      "Craft"
     ]
   },
   "Girafa Celestre": {
@@ -2290,6 +2257,17 @@
       "Xmas"
     ]
   },
+  "Fishboard": {
+    "id": 353,
+    "rarity": "Secret",
+    "kosten": 215000000,
+    "wert": 825000,
+    "image": "https://www.steal-a-brainrot.de/images/fishboard.webp",
+    "fixed_sets": [],
+    "type": [
+      "Xmas"
+    ]
+  },
   "La Vacca Jacko Linterino": {
     "id": 216,
     "rarity": "Secret",
@@ -2929,6 +2907,17 @@
       "Heart Lucky Block"
     ]
   },
+  "DJ Panda": {
+    "id": 354,
+    "rarity": "Secret",
+    "kosten": 2500000000,
+    "wert": 17500000,
+    "image": "https://www.steal-a-brainrot.de/images/dj-panda.webp",
+    "fixed_sets": [],
+    "type": [
+      "Fuse"
+    ]
+  },
   "Las Sis": {
     "id": 282,
     "rarity": "Secret",
@@ -3350,6 +3339,17 @@
       "Heart Lucky Block"
     ]
   },
+  "Antonio": {
+    "id": 102,
+    "rarity": "Secret",
+    "kosten": 12500000000,
+    "wert": 55000000,
+    "image": "https://www.steal-a-brainrot.de/images/antonio.webp",
+    "fixed_sets": [],
+    "type": [
+      "Craft"
+    ]
+  },
   "Spaghetti Tualetti": {
     "id": 323,
     "rarity": "Secret",
@@ -3360,6 +3360,15 @@
     "type": [
       "Secret Lucky Block"
     ]
+  },
+  "Ventoliero Pavonero": {
+    "id": 355,
+    "rarity": "Secret",
+    "kosten": 15500000000,
+    "wert": 65000000,
+    "image": "https://www.steal-a-brainrot.de/images/ventoliero-pavonero.webp",
+    "fixed_sets": [],
+    "type": []
   },
   "Festive 67": {
     "id": 324,
@@ -3421,6 +3430,17 @@
     "image": "https://www.steal-a-brainrot.de/images/spooky-and-pumpky.webp",
     "fixed_sets": []
   },
+  "Elefanto Frigo": {
+    "id": 93,
+    "rarity": "Secret",
+    "kosten": 12500000000,
+    "wert": 85000000,
+    "image": "https://www.steal-a-brainrot.de/images/elefanto-frigo.webp",
+    "fixed_sets": [],
+    "type": [
+      "Craft"
+    ]
+  },
   "La Food Combinasion": {
     "id": 351,
     "rarity": "Secret",
@@ -3452,6 +3472,17 @@
     "fixed_sets": [],
     "type": [
       "Trader"
+    ]
+  },
+  "Signore Carapace": {
+    "id": 61,
+    "rarity": "Secret",
+    "kosten": 42500000000,
+    "wert": 105000000,
+    "image": "https://www.steal-a-brainrot.de/images/signore-carapace.webp",
+    "fixed_sets": [],
+    "type": [
+      "Craft"
     ]
   },
   "Los Sekolahs": {
@@ -3561,15 +3592,15 @@
       "Fuse"
     ]
   },
-  "Love Love Bear": {
-    "id": 333,
+  "Celestial Pegasus": {
+    "id": 356,
     "rarity": "Secret",
-    "kosten": 60000000000,
-    "wert": 140000000,
-    "image": "https://www.steal-a-brainrot.de/images/love-love-bear.webp",
+    "kosten": 150000000000,
+    "wert": 175000000,
+    "image": "https://www.steal-a-brainrot.de/images/celestial-pegasus.webp",
     "fixed_sets": [],
     "type": [
-      "Cupid's Machine"
+      "Secret Lucky Block"
     ]
   },
   "Cerberus": {
@@ -3596,6 +3627,17 @@
       "Fuse"
     ]
   },
+  "Love Love Bear": {
+    "id": 333,
+    "rarity": "Secret",
+    "kosten": 225000000000,
+    "wert": 225000000,
+    "image": "https://www.steal-a-brainrot.de/images/love-love-bear.webp",
+    "fixed_sets": [],
+    "type": [
+      "Cupid's Machine"
+    ]
+  },
   "Dragon Cannelloni": {
     "id": 343,
     "rarity": "Secret",
@@ -3617,17 +3659,6 @@
       "Gingerbread Town"
     ]
   },
-  "Headless Horseman": {
-    "id": 345,
-    "rarity": "Secret",
-    "kosten": 325000000000,
-    "wert": 325000000,
-    "image": "https://www.steal-a-brainrot.de/images/headless-horseman.webp",
-    "fixed_sets": [],
-    "type": [
-      "Witch"
-    ]
-  },
   "Hydra Dragon Cannelloni": {
     "id": 346,
     "rarity": "Secret",
@@ -3642,16 +3673,27 @@
   "Skibidi Toilet": {
     "id": 347,
     "rarity": "OG",
-    "kosten": 450000000000,
-    "wert": 450000000,
+    "kosten": 400000000000,
+    "wert": 400000000,
     "image": "https://www.steal-a-brainrot.de/images/skibidi-toilet.webp",
     "fixed_sets": []
+  },
+  "Headless Horseman": {
+    "id": 345,
+    "rarity": "OG",
+    "kosten": 500000000000,
+    "wert": 500000000,
+    "image": "https://www.steal-a-brainrot.de/images/headless-horseman.webp",
+    "fixed_sets": [],
+    "type": [
+      "Witch"
+    ]
   },
   "Meowl": {
     "id": 348,
     "rarity": "OG",
-    "kosten": 550000000000,
-    "wert": 550000000,
+    "kosten": 600000000000,
+    "wert": 600000000,
     "image": "https://www.steal-a-brainrot.de/images/meowl.webp",
     "fixed_sets": []
   },

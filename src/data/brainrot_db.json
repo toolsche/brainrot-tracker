@@ -3704,5 +3704,21 @@
     "wert": 750000000,
     "image": "https://www.steal-a-brainrot.de/images/strawberry-elephant.webp",
     "fixed_sets": []
+  },
+  "Nacho Spyder": {
+    "id": 357,
+    "rarity": "Secret",
+    "kosten": 10000000000,
+    "wert": 50000000,
+    "image": "https://www.steal-a-brainrot.de/images/nacho-spyder.webp",
+    "type": ["Limited"]
+  },
+  "Tacorillo Crocodillo": {
+    "id": 358,
+    "rarity": "Secret",
+    "kosten": 1500000000,
+    "wert": 12500000,
+    "image": "https://www.steal-a-brainrot.de/images/tacorillo-crocodillo.webp",
+    "type": ["Limited"]
   }
 }

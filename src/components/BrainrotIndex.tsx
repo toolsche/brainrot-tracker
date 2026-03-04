@@ -120,9 +120,16 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
     };
 
     const RARITY_ORDER = ['Common', 'Rare', 'Epic', 'Legendary', 'Mythical', 'Brainrot God', 'Secret'];
-    const grouped: Record<string, string[]> = {};
+    const grouped: Record<string, { name: string; wert: number }[]> = {};
 
-    filteredItems.forEach((item) => {
+    const sortedForExport = [...tabItems].sort((a, b) => {
+      const ra = RARITY_ORDER.indexOf(a.rarity || 'Common');
+      const rb = RARITY_ORDER.indexOf(b.rarity || 'Common');
+      if (ra !== rb) return ra - rb;
+      return b.wert - a.wert;
+    });
+
+    sortedForExport.forEach((item) => {
       const key = String(item.id);
       const isCollected = userStats[key]?.includes(activeTab);
       const isTradingItem = tradingStats[key]?.includes(activeTab);
@@ -134,14 +141,14 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
 
       if (include) {
         const rarity = item.rarity || 'Common';
-        (grouped[rarity] ??= []).push(item.name);
+        (grouped[rarity] ??= []).push({ name: item.name, wert: item.wert });
       }
     });
 
     const hasItems = Object.keys(grouped).length > 0;
     const itemListText = RARITY_ORDER
       .filter(r => grouped[r]?.length)
-      .map(r => `**${r}**\n${grouped[r].map(n => `• ${n}`).join('\n')}`)
+      .map(r => `**${r}**\n${grouped[r].map(i => `• ${i.name}`).join('\n')}`)
       .join('\n\n');
 
     const finalDocument = `${titles[type]}\n\n${hasItems ? itemListText : "Keine Items gefunden."}`;
@@ -243,6 +250,10 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
       .sort((a, b) => b.items.length - a.items.length);
   }, [whoHasData, tabItems, userStats, activeTab, discordUserId]);
 
+  const requiredCount = ['Cursed', 'Divine'].includes(activeTab) ? 215
+    : ['Candy', 'Lava', 'Galaxy'].includes(activeTab) ? tabItems.length
+    : 269;
+
   const collectedCount = useMemo(() => {
     const stats = appMode === 'INDEX' ? userStats : tradingStats;
     return tabItems.filter(item => stats[String(item.id)]?.includes(activeTab)).length;
@@ -277,7 +288,9 @@ export default function BrainrotDashboard({ discordUserId, username, avatar }: {
             <h2 className={`text-lg md:text-2xl font-black uppercase italic ${VARIANT_STYLES[activeTab].text}`}>{activeTab}</h2>
 
             <span className="text-base md:text-lg font-black text-white/70">
-              {collectedCount}<span className="text-white/30">/{tabItems.length}</span>
+              <span className={collectedCount >= requiredCount ? 'text-[#3be364]' : ''}>{collectedCount}</span>
+              <span className="text-white/30">/{tabItems.length}</span>
+              <span className="text-white/20 text-xs font-normal ml-1">(min. {requiredCount})</span>
             </span>
 
             <div className="flex bg-black/60 rounded-lg p-1 border border-white/10">
